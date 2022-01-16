@@ -13,8 +13,8 @@
         }
     fieldset{
         width:400px;
-        margin-left:400px;
-        margin-top:200px;
+        margin-left:430px;
+        margin-top:250px;
         background-color: black;
         border-radius: 20px;
         opacity: 0.7;

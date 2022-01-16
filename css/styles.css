@@ -1,0 +1,165 @@
+body{
+    margin:0;
+    padding:0;
+}
+/*==============================Header & Menu========================*/
+header{
+    background:black;
+    width:100%;
+    height:80%;
+    display:flex;
+    justify-content: space-between;
+}
+.admin{
+    display: flex;
+    justify-content: space-between;
+}
+.img{
+    margin-top:10px;
+    margin-left:20px;
+}
+.img-admin{
+    border-radius: 80px;
+}
+.txt{
+    color:ivory;
+}
+.txt h3{
+    margin-left: 30px;
+}
+.txt p{
+    margin-left: 30px;
+}
+.voir{
+    text-decoration: none;
+    color:ivory;
+}
+.voir:hover{
+    color:gray;
+    transition:0.7s;
+}
+.log-out{
+    margin-top:30px;
+    margin-right:80px;
+}
+.decon{
+    text-decoration: none;
+    color:ivory;
+    font-size: 30px;
+}
+.decon:hover{
+    color:gray;
+    transition:0.7s;
+}
+/*===========================menu and section============================*/
+#boody{
+    display:flex;
+    justify-content: space-between;
+}
+.menu-link{
+    margin-left:-40px;
+}
+.menu-link ul li{
+    background:black;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding:15px;
+    width:150%;
+    text-align: center;
+}
+.menu-link ul li a{
+    text-decoration: none;
+    color:ivory;
+}
+.menu-link ul li:hover{
+    background:gray;
+    transition:0.5s;
+}
+.menu-link ul li:active{
+    background:gray;
+}
+/*================================fin header et menu==================*/
+section{
+    width:1000px;
+    margin-right:50px;
+    border: 1px solid red;
+}
+/*==============================================================================*/
+/*=============================Entree=======================*/
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.s-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:50px;
+    margin-top:50px;
+    text-decoration: underline;
+}
+.table1{
+    margin-left:10px;
+    border:1px solid black;
+    border-radius: 20px;
+    width:370px;
+}
+.th1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:#42f587;
+}
+.inpt1{
+    height:25px;
+    width:100%;
+    border-radius: 3px;
+    outline:none;
+}
+#sub1{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#42f587;
+    height:40px;
+    width:80px;
+}
+#sub1:hover{
+    background:ivory;
+    color:#42f587;
+}
+#res1{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f54242;
+    height:40px;
+    width:80px;
+}
+#res1:hover{
+    background:ivory;
+    color:#f54242;
+}
+/*==============================recuperation entree=========================*/
+table .th2 .td2{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.thead{
+    background:#42f587;
+}
+.th2{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:5px;
+}
+.fieldset1{
+    width:800px;
+    margin-left: 100px;
+}
+.s-title1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:50px;
+    margin-top:50px;
+    text-decoration: underline;
+}
