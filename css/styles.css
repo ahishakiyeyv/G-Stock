@@ -423,3 +423,101 @@ table .th2-cat .td-cat{
     width:250px;
     margin-left: 300px;
 }
+/*=================================================================================*/
+/*==============================journal===========================*/
+.title-journ1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.title-journ2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+/*===============================================================================*/
+/*===========================utilisateur===========================*/
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.stit-user{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:50px;
+    margin-top:50px;
+    text-decoration: underline;
+}
+.fieldset9{
+    width:350px;
+    border-radius: 20px;
+    margin-left:20px;
+}
+.th-user{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.inpt-user{
+    height:25px;
+    width:100%;
+    border-radius: 3px;
+    outline:none;
+}
+#sub-user{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#42f587;
+    height:40px;
+    width:85px;
+}
+#sub-user:hover{
+    background:ivory;
+    color:#42f587;
+}
+#res-user{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f54242;
+    height:40px;
+    width:80px;
+}
+#res-user:hover{
+    background:ivory;
+    color:#f54242;
+}
+/*========================recuperation utilisateur================*/
+.s-tituser{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:350px;
+    margin-top:50px;
+    text-decoration: underline;
+}
+table .th2-user .td-user{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.thead-user{
+    background:#17238a;
+}
+.th2-user{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:10px;
+}
+.fieldset01{
+    width:300px;
+    margin-left: 300px;
+}
+/*============================================================================*/
+/*=========================statistique=========================*/
+.title-stat{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
