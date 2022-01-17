@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Sortie Stock</title>
 </head>
 <body>
@@ -107,6 +107,9 @@
                    </tbody>
                 </table>
             </fieldset>
+        </div>
+        <div class="print">
+            <a href="#">Imprimer le facture</a>
         </div>
     </section>
     </div>

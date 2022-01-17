@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Stock</title>
+    <title>Categorie</title>
 </head>
 <body>
     <header>
@@ -40,30 +40,41 @@
         </div>
     </nav>
     <section>
-        <h2 class="title-stock">En Stock</h2>
-        <div class="table-stock">
-            <h3 class="titlestock">Liste des produits en stock</h3>
-            <fieldset class="fieldset4">
+        <h2 class="title-cat">Categorie</h2>
+        <div class="categ">
+            <h3 class="s-titcat">Ajouter une Categorie</h3>
+            <fieldset class="fieldset7">
+                <table>
+                    <tr>
+                     <th class="th-cat">Nouvelle Categorie</th>
+                   
+                        <th><input type="text" name="" class="inpt-cat"placeholder="Nouvelle categorie..."></th>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Ajouter" id="sub-cat"></td>
+                   <td> <input type="reset" value="Annuler" id="res-cat"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div class="recup-cat">
+            <h3 class="s-titcat2">Liste des categories</h3>
+            <fieldset class="fieldset8">
             <table>
-                   <thead class="thead-stock">
+                    <thead class="thead-cat">
                        <tr>
-                           <th class="th-stock">Code Produit</th>
-                           <th class="th-stock">Designation</th>
-                           <th class="th-stock">Categorie</th>
-                           <th class="th-stock">Quantite Restant</th>
-                           <th class="th-stock">Prix</th>
+                           <th class="th2-cat">Nom Categorie</th>
+                           <th class="th2-cat"colspan="2">Actions</th>
                        </tr>
                    </thead>
-                   <tbody class="tbody-stock">
+                   <tbody class="tbody-cat">
                        <tr>
-                           <td class="td-stock"></td>
-                           <td class="td-stock"></td>
-                           <td class="td-stock"></td>
-                           <td class="td-stock"></td>
-                           <td class="td-stock"></td>
+                           <td class="td-cat"></td>
+                           <td class="td-cat"></td>
+                           <td class="td-cat"></td>
                        </tr>
                    </tbody>
-                </table>
+                    </table>
             </fieldset>
         </div>
     </section>
