@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Tableau de Bord</title>
+    <title>Stock</title>
 </head>
 <body>
     <header>
@@ -40,7 +40,32 @@
         </div>
     </nav>
     <section>
-        
+        <h2 class="title-stock">En Stock</h2>
+        <div class="table-stock">
+            <h3 class="titlestock">Liste des produits en stock</h3>
+            <fieldset class="fieldset4">
+            <table>
+                   <thead class="thead-stock">
+                       <tr>
+                           <th class="th-stock">Code Produit</th>
+                           <th class="th-stock">Designation</th>
+                           <th class="th-stock">Categorie</th>
+                           <th class="th-stock">Quantite Restant</th>
+                           <th class="th-stock">Prix</th>
+                       </tr>
+                   </thead>
+                   <tbody class="tbody-stock">
+                       <tr>
+                           <td class="td-stock"></td>
+                           <td class="td-stock"></td>
+                           <td class="td-stock"></td>
+                           <td class="td-stock"></td>
+                           <td class="td-stock"></td>
+                       </tr>
+                   </tbody>
+                </table>
+            </fieldset>
+        </div>
     </section>
     </div>
 </body>

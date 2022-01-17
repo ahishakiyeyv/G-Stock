@@ -20,7 +20,7 @@
             </div>
             </div>
             <div class="log-out">
-                <a href="index.php" class="decon"><i class="fas fa-power-off"></i></a>
+                <a href="index.php" class="decon">Log-out   <i class="fas fa-power-off"></i></a>
             </div>
         
     </header>

@@ -45,7 +45,7 @@ header{
 .decon{
     text-decoration: none;
     color:ivory;
-    font-size: 30px;
+    font-size: 15px;
 }
 .decon:hover{
     color:gray;
@@ -122,7 +122,7 @@ section{
     font-family:Arial, Helvetica, sans-serif;
     background:#42f587;
     height:40px;
-    width:80px;
+    width:85px;
 }
 #sub1:hover{
     background:ivory;
@@ -162,4 +162,188 @@ table .th2 .td2{
     margin-left:50px;
     margin-top:50px;
     text-decoration: underline;
+}
+
+/*============================================================================*/
+/*=========================sortie==============================*/
+.title-sort{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.stitle-sort{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:50px;
+    margin-top:50px;
+    text-decoration: underline;
+}
+.fieldset2{
+    width:350px;
+    border-radius: 20px;
+}
+.th-sort{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:#f54242;
+}
+.inpt-sort{
+    height:25px;
+    width:100%;
+    border-radius: 3px;
+    outline:none;
+}
+#btn-sub{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#42f587;
+    height:40px;
+    width:85px;
+}
+#btn-sub:hover{
+    background:ivory;
+    color:#42f587;
+}
+#btn-reset{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f54242;
+    height:40px;
+    width:80px;
+}
+#btn-reset:hover{
+    background:ivory;
+    color:#f54242;
+}
+/*===================================recuperation sortie==============*/
+.stitle-recup{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:50px;
+    margin-top:50px;
+    text-decoration: underline;
+}
+table .th2-sort .td-sort{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.thead-sort{
+    background:#f54242;
+}
+.th2-sort{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:5px;
+}
+.fieldset3{
+    width:600px;
+    margin-left: 100px;
+}
+/*====================================================================================*/
+/*=============================stock=========================*/
+.title-stock{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.titlestock{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:50px;
+    margin-top:50px;
+    text-decoration: underline;
+}
+.fieldset4{
+    width:500px;
+    margin-left:200px;
+}
+table .th-stock .td-stock{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.thead-stock{
+    background: #17238a;
+}
+.th-stock{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:10px;
+}
+/*==================================================================================*/
+/*===========================fournisseur======================*/
+.title-four{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.s-titFourn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:50px;
+    margin-top:50px;
+    text-decoration: underline;
+}
+.fieldset5{
+    width:350px;
+    border-radius: 20px;
+    margin-left:20px;
+}
+.th-fourn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.inpt-fourn{
+    height:25px;
+    width:100%;
+    border-radius: 3px;
+    outline:none;
+}
+#sub-fourn{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#42f587;
+    height:40px;
+    width:85px;
+}
+#sub-fourn:hover{
+    background:ivory;
+    color:#42f587;
+}
+#res-fourn{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f54242;
+    height:40px;
+    width:80px;
+}
+#res-fourn:hover{
+    background:ivory;
+    color:#f54242;
+}
+/*========================recuperation fournisseur============*/
+.stit-fourn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:350px;
+    margin-top:50px;
+    text-decoration: underline;
+}
+table .th2-fourn .td-fourn{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.thead-fourn{
+    background:#17238a;
+}
+.th2-fourn{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:10px;
+}
+.fieldset6{
+    width:350px;
+    margin-left: 300px;
 }
