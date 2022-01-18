@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Utilisateur</title>
 </head>
 <body>
@@ -46,6 +46,14 @@
             <fieldset class="fieldset9">
                 <form action="" method="post">
                 <table>
+                <tr>
+                     <th class="th-user">Nom</th>
+                        <th><input type="text" name="" class="inpt-user"placeholder="Nom..."></th>
+                    </tr>
+                    <tr>
+                     <th class="th-user">Prenom</th>
+                        <th><input type="text" name="" class="inpt-user"placeholder="Prenom..."></th>
+                    </tr>
                     <tr>
                      <th class="th-user">Email</th>
                         <th><input type="text" name="" class="inpt-user"placeholder="Email..."></th>
@@ -68,6 +76,8 @@
             <table>
                     <thead class="thead-user">
                        <tr>
+                       <th class="th2-user">Nom</th>
+                           <th class="th2-user">Prenom</th>
                            <th class="th2-user">Email</th>
                            <th class="th2-user">Mot de Passe</th>
                            <th class="th2-user"colspan="2">Actions</th>
@@ -75,6 +85,8 @@
                    </thead>
                    <tbody class="tbody-user">
                        <tr>
+                           <td class="td-user"></td>
+                           <td class="td-user"></td>
                            <td class="td-user"></td>
                            <td class="td-user"></td>
                            <td class="td-user"></td>

@@ -65,12 +65,13 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     padding:15px;
+    width:120%;
     text-align: center;
 }
 .menu-link ul li a{
     text-decoration: none;
     color:ivory;
-    width:150%;
+    padding:15px;
 }
 .menu-link ul li:hover{
     background:gray;
@@ -101,7 +102,7 @@ section{
     text-decoration: underline;
 }
 .table1{
-    margin-left:10px;
+    margin-left:80px;
     border:1px solid black;
     border-radius: 20px;
     width:370px;
@@ -290,7 +291,7 @@ table .th-stock .td-stock{
 .fieldset5{
     width:350px;
     border-radius: 20px;
-    margin-left:20px;
+    margin-left:80px;
 }
 .th-fourn{
     font-family: Arial, Helvetica, sans-serif;
@@ -366,7 +367,7 @@ table .th2-fourn .td-fourn{
 .fieldset7{
     width:350px;
     border-radius: 20px;
-    margin-left:20px;
+    margin-left:80px;
 }
 .th-cat{
     font-family: Arial, Helvetica, sans-serif;
@@ -456,7 +457,7 @@ table .th2-cat .td-cat{
 .fieldset9{
     width:350px;
     border-radius: 20px;
-    margin-left:20px;
+    margin-left:80px;
 }
 .th-user{
     font-family: Arial, Helvetica, sans-serif;
@@ -511,7 +512,7 @@ table .th2-user .td-user{
     padding:10px;
 }
 .fieldset01{
-    width:300px;
+    width:400px;
     margin-left: 300px;
 }
 /*============================================================================*/
