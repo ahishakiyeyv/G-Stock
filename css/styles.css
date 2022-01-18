@@ -65,12 +65,12 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     padding:15px;
-    width:150%;
     text-align: center;
 }
 .menu-link ul li a{
     text-decoration: none;
     color:ivory;
+    width:150%;
 }
 .menu-link ul li:hover{
     background:gray;
@@ -182,6 +182,7 @@ table .th2 .td2{
 .fieldset2{
     width:350px;
     border-radius: 20px;
+    margin-left:80px;
 }
 .th-sort{
     font-family: Arial, Helvetica, sans-serif;
@@ -251,7 +252,7 @@ table .th2-sort .td-sort{
 .titlestock{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    margin-left:50px;
+    margin-left:250px;
     margin-top:50px;
     text-decoration: underline;
 }

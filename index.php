@@ -50,7 +50,7 @@
 <body>
     <fieldset>
         <legend>Connectez-vous</legend>
-    <form method="post">
+    <form action="dashboard.php" method="post">
         <table>
             <tr>
                 <th>EMAIL:</th>
