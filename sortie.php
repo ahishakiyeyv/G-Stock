@@ -34,6 +34,7 @@ include("database.php");
                 <li><a href="dashboard.php">Dashboard    <i class="fas fa-tachometer-alt"></i></a></li>
                 <li><a href="entree.php">Entrée    <i class="fas fa-cart-plus"></i></a></li>
                 <li><a href="sortie.php">Sortie    <i class="fas fa-shopping-bag"></i></a></li>
+                <li><a href="produit.php">Produit    <i class="fas fa-dolly-flatbed"></i></a></li>
                 <li><a href="stock.php">Stock   <i class="fas fa-warehouse"></i></a></li>
                 <li><a href="fournisseur.php">Fournisseur     <i class="fas fa-user-plus"></i></a></li>
                 <li><a href="categorie.php">Categorie     <i class="fas fa-sort"></i></a></li>

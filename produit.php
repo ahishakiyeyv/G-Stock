@@ -1,6 +1,7 @@
 <?php
 include("database.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,7 +10,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Categorie</title>
+    <title>Produit</title>
 </head>
 <body>
     <header>
@@ -44,52 +45,58 @@ include("database.php");
         </div>
     </nav>
     <section>
-        <h2 class="title-cat">Categorie</h2>
-        <div class="categ">
-            <h3 class="s-titcat">Ajouter une Categorie</h3>
-            <fieldset class="fieldset7">
+    <h2 class="title_pro">Produit</h2>
+        <div class="aj_produit">
+            <h3 class="stitlepro">Ajouter un produit</h3>
+            <fieldset class="fieldset002">
                 <form action="" method="post">
-                <table>
-                    <tr>
-                     <th class="th-cat">Nouvelle Categorie</th>
-                   
-                        <th><input type="text" name="categorie" class="inpt-cat" placeholder="Nouvelle categorie..."></th>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="Ajouter" id="sub-cat" name="submit"></td>
-                   <td> <input type="reset" value="Annuler" id="res-cat"></td>
-                    </tr>
-                </table>
+                    <table>
+                        <tr>
+                            <th class="th-pro">Code Produit</th>
+                            <td><input type="text" name="code" class="inpt-pro" placeholder="Code Produit..." required></td>
+                        </tr>
+                        <tr>
+                            <th class="th-pro">Nom Produit</th>
+                            <td><input type="text" name="nompro" class="inpt-pro" placeholder="Nom..." required></td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td><input type="submit" value="Ajouter" name="submit" id="sub_pro">
+                            <input type="reset" value="Annuler" id="res_pro">
+                        </td>
+                        </tr>
+                    </table>
                 </form>
             </fieldset>
         </div>
-        <?php
-        $select=$bdd->query("SELECT * FROM categorie ORDER BY id_cat ASC LIMIT 5");
-        ?>
-        <div class="recup-cat">
-            <h3 class="s-titcat2">Liste des categories</h3>
-            <fieldset class="fieldset8">
+        <div class="recup-pro">
+            <?php
+            $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro ASC LIMIT 10");
+            ?>
+        <h3 class="stitle-pro">Listes Produits</h3>
+            <fieldset class="fieldset003">
             <table>
-                    <thead class="thead-cat">
+                   <thead class="thead-pro">
                        <tr>
-                           <th class="th2-cat">Nom Categorie</th>
-                           <th class="th2-cat"colspan="2">Actions</th>
+                           <th class="th2-pro">Code Produit</th>
+                           <th class="th2-pro">Nom Produit</th>
                        </tr>
                    </thead>
                    <?php
                    while($dataselect=$select->fetch()){
                    ?>
-                   <tbody class="tbody-cat">
+                   <tbody class="tbody-pro">
                        <tr>
-                           <td class="td-cat"><?php echo $dataselect["nom_cat"];?></td>
-                           <td class="td-cat">Modifier</td>
-                           <td class="td-cat">Supprimer</td>
+                           <td class="td-pro"><?php echo $dataselect["CodePro"];?></td>
+                           <td class="td-pro"><?php echo $dataselect["nomPro"];?></td>
+                           <td class="td-pro">Modifier</td>
+                           <td class="td-pro">Supprimer</td>
                        </tr>
                        <?php
                    }
                        ?>
                    </tbody>
-                    </table>
+                </table>
             </fieldset>
         </div>
     </section>
@@ -98,8 +105,9 @@ include("database.php");
 </html>
 <?php
 if(isset($_POST["submit"])){
-    $categorie=$_POST["categorie"];
-    $insert=$bdd->prepare("INSERT INTO categorie(nom_cat)VALUES(?)");
-    $insert->execute(array($categorie));
+    $code=$_POST["code"];
+    $name=$_POST["nompro"];
+    $insert=$bdd->prepare("INSERT INTO produit(CodePro,nomPro)VALUES(?,?)");
+    $insert->execute(array($code,$name));
 }
 ?>

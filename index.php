@@ -48,12 +48,18 @@ include("database.php");
         background: gray;
         transition:0.7s;
     }
+    .error{
+        font-size:20px;
+        color:red;
+        font-family: arial;
+        text-align:center;
+    }
     </style>
 </head>
 <body>
     <fieldset>
         <legend>Connectez-vous</legend>
-    <form action="dashboard.php" method="post">
+    <form action="" method="post">
         <table>
             <tr>
                 <th>EMAIL:</th>
@@ -65,10 +71,24 @@ include("database.php");
             </tr>
             <tr>
                 <th></th>
-                <td><input type="submit" value="Connexion" id="sub"></td>
+                <td><input type="submit" value="Connexion" id="sub" name="submit"></td>
             </tr>
         </table>   
     </form>
     </fieldset>
 </body>
 </html>
+<?php
+ if(isset($_POST["submit"])){
+     $mail=$_POST["email"];
+     $password=$_POST["motdepasse"];
+     $select=$bdd->prepare("SELECT email_util,password_util FROM utilisateur WHERE email_util=:mail AND password_util=:motpasse");
+    $select->execute(array('mail'=>$mail,'motpasse'=>$password));
+    $users=$select->rowCount();
+    if($users>0){
+        header("location:dashboard.php");
+    }else{
+     echo "<h1 class='error'>Connexion Echoué!!</h1>";
+ }
+}
+?>

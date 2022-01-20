@@ -1,6 +1,7 @@
 body{
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 /*==============================Header & Menu========================*/
 header{
@@ -243,6 +244,83 @@ table .th2-sort .td-sort{
     margin-left: 100px;
 }
 /*====================================================================================*/
+/*==========================Produit===================================*/
+.title_pro{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.stitlepro{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:100px;
+    margin-top:50px;
+    text-decoration: underline;
+}
+.fieldset002{
+    width:350px;
+    border-radius: 20px;
+    margin-left:80px;
+}
+.th-pro{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:#048730;
+}
+.inpt-pro{
+    height:25px;
+    width:100%;
+    border-radius: 3px;
+    outline:none;
+}
+#sub_pro{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#42f587;
+    height:40px;
+    width:85px;
+}
+#sub_pro:hover{
+    background:ivory;
+    color:#42f587;
+}
+#res_pro{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f54242;
+    height:40px;
+    width:80px;
+}
+#res_pro:hover{
+    background:ivory;
+    color:#f54242;
+}
+/*===============================recuperation produit=====================*/
+.stitle-pro{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left:320px;
+    margin-top:100px;
+    text-decoration: underline;
+}
+table .th2-pro .td-pro{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.thead-pro{
+    background:#03fc6b;
+}
+.th2-pro{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:10px;
+}
+.fieldset003{
+    width:300px;
+    margin-left: 300px;
+}
+/*====================================================================================*/
 /*=============================stock=========================*/
 .title-stock{
     font-family: Arial, Helvetica, sans-serif;
@@ -258,7 +336,7 @@ table .th2-sort .td-sort{
     text-decoration: underline;
 }
 .fieldset4{
-    width:500px;
+    width:600px;
     margin-left:200px;
 }
 table .th-stock .td-stock{
@@ -271,7 +349,7 @@ table .th-stock .td-stock{
 .th-stock{
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    padding:10px;
+    padding:15px;
 }
 /*==================================================================================*/
 /*===========================fournisseur======================*/
@@ -334,7 +412,7 @@ table .th-stock .td-stock{
     text-decoration: underline;
 }
 table .th2-fourn .td-fourn{
-    border: 1px solid black;
+    border: 1px solid red;
     border-collapse: collapse;
 }
 .thead-fourn{
@@ -345,8 +423,11 @@ table .th2-fourn .td-fourn{
     font-family: Arial, Helvetica, sans-serif;
     padding:10px;
 }
+.td-fourn{
+    padding:5px;
+}
 .fieldset6{
-    width:350px;
+    width:450px;
     margin-left: 300px;
 }
 /*=============================================================================*/
@@ -421,8 +502,11 @@ table .th2-cat .td-cat{
     font-family: Arial, Helvetica, sans-serif;
     padding:10px;
 }
+.td-cat{
+    padding:5px;
+}
 .fieldset8{
-    width:250px;
+    width:350px;
     margin-left: 300px;
 }
 /*=================================================================================*/
@@ -509,11 +593,14 @@ table .th2-user .td-user{
 .th2-user{
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    padding:10px;
+    padding:8px;
+}
+.td-user{
+    padding:5px;
 }
 .fieldset01{
-    width:400px;
-    margin-left: 300px;
+    width:750px;
+    margin-left: 180px;
 }
 /*============================================================================*/
 /*=========================statistique=========================*/

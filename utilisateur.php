@@ -8,7 +8,7 @@ include("database.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Utilisateur</title>
 </head>
 <body>
@@ -34,6 +34,7 @@ include("database.php");
                 <li><a href="dashboard.php">Dashboard    <i class="fas fa-tachometer-alt"></i></a></li>
                 <li><a href="entree.php">Entrée    <i class="fas fa-cart-plus"></i></a></li>
                 <li><a href="sortie.php">Sortie    <i class="fas fa-shopping-bag"></i></a></li>
+                <li><a href="produit.php">Produit    <i class="fas fa-dolly-flatbed"></i></a></li>
                 <li><a href="stock.php">Stock   <i class="fas fa-warehouse"></i></a></li>
                 <li><a href="fournisseur.php">Fournisseur     <i class="fas fa-user-plus"></i></a></li>
                 <li><a href="categorie.php">Categorie     <i class="fas fa-sort"></i></a></li>
@@ -51,28 +52,31 @@ include("database.php");
                 <table>
                 <tr>
                      <th class="th-user">Nom</th>
-                        <th><input type="text" name="" class="inpt-user"placeholder="Nom..."></th>
+                        <th><input type="text" name="nom" class="inpt-user"placeholder="Nom..."></th>
                     </tr>
                     <tr>
                      <th class="th-user">Prenom</th>
-                        <th><input type="text" name="" class="inpt-user"placeholder="Prenom..."></th>
+                        <th><input type="text" name="prenom" class="inpt-user"placeholder="Prenom..."></th>
                     </tr>
                     <tr>
                      <th class="th-user">Email</th>
-                        <th><input type="text" name="" class="inpt-user"placeholder="Email..."></th>
+                        <th><input type="text" name="email" class="inpt-user"placeholder="Email..."></th>
                     </tr>
                     <tr>
                      <th class="th-user">Mot de Passe</th>
-                        <td><input type="password" name="" class="inpt-user" placeholder="Mot de Passe..."></td>
+                        <td><input type="password" name="motdepasse" class="inpt-user" placeholder="Mot de Passe..."></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Ajouter" id="sub-user"></td>
+                        <td><input type="submit" value="Ajouter" id="sub-user" name="submit"></td>
                    <td> <input type="reset" value="Annuler" id="res-user"></td>
                     </tr>
                 </table>
                 </form>
             </fieldset>
         </div>
+        <?php
+        $selection=$bdd->query("SELECT * FROM utilisateur ORDER BY id_util LIMIT 5");
+        ?>
         <div class="recup-user">
         <h3 class="s-tituser">Liste des Utilisateurs</h3>
             <fieldset class="fieldset01">
@@ -83,18 +87,25 @@ include("database.php");
                            <th class="th2-user">Prenom</th>
                            <th class="th2-user">Email</th>
                            <th class="th2-user">Mot de Passe</th>
-                           <th class="th2-user"colspan="2">Actions</th>
+                           <th class="th2-user"colspan="3">Actions</th>
                        </tr>
                    </thead>
+                   <?php
+                   while($dataselection=$selection->fetch()){
+                   ?>
                    <tbody class="tbody-user">
                        <tr>
-                           <td class="td-user"></td>
-                           <td class="td-user"></td>
-                           <td class="td-user"></td>
-                           <td class="td-user"></td>
-                           <td class="td-user"></td>
-                           <td class="td-user"></td>
+                           <td class="td-user"><?php echo $dataselection["nom_util"]?></td>
+                           <td class="td-user"><?php echo $dataselection["prenom_util"]?></td>
+                           <td class="td-user"><?php echo $dataselection["email_util"]?></td>
+                           <td class="td-user"><?php echo $dataselection["password_util"]?></td>
+                           <td class="td-user">Modifier</td>
+                           <td class="td-user">Supprimer</td>
+                           <td class="td-user">Activer</td>
                        </tr>
+                       <?php
+                   }
+                       ?>
                    </tbody>
                     </table>
             </fieldset>
@@ -103,3 +114,13 @@ include("database.php");
     </div>
 </body>
 </html>
+<?php
+    if(isset($_POST["submit"])){
+        $name=$_POST["nom"];
+        $surname=$_POST["prenom"];
+        $mail=$_POST["email"];
+        $password=$_POST["motdepasse"];
+        $insertion=$bdd->prepare("INSERT INTO utilisateur(nom_util,prenom_util,email_util,password_util)VALUES(?,?,?,?)");
+        $insertion->execute(array($name,$surname,$mail,$password));
+    }
+?>

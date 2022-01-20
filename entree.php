@@ -34,6 +34,7 @@ include("database.php");
                 <li><a href="dashboard.php">Dashboard    <i class="fas fa-tachometer-alt"></i></a></li>
                 <li><a href="entree.php">Entrée    <i class="fas fa-cart-plus"></i></a></li>
                 <li><a href="sortie.php">Sortie    <i class="fas fa-shopping-bag"></i></a></li>
+                <li><a href="produit.php">Produit    <i class="fas fa-dolly-flatbed"></i></a></li>
                 <li><a href="stock.php">Stock   <i class="fas fa-warehouse"></i></a></li>
                 <li><a href="fournisseur.php">Fournisseur     <i class="fas fa-user-plus"></i></a></li>
                 <li><a href="categorie.php">Categorie     <i class="fas fa-sort"></i></a></li>
@@ -51,27 +52,27 @@ include("database.php");
             <table>
                 <tr>
                      <th class="th1">Code Produit:</th>
-                     <td><input type="text" name="" class="inpt1" placeholder="code produit..."></td>
+                     <td><input type="text" name="codepro" class="inpt1" placeholder="code produit..."></td>
                 </tr>
                 <tr>
                      <th class="th1">Designation:</th>
-                     <td><input type="text" name="" class="inpt1" placeholder="designation..."></td>
+                     <td><input type="text" name="designation" class="inpt1" placeholder="designation..."></td>
                 </tr>
                 <tr>
                      <th class="th1">Categorie:</th>
-                    <td><input type="text" name="" class="inpt1" placeholder="categorie..."></td>
+                    <td><input type="text" name="categorie" class="inpt1" placeholder="categorie..."></td>
                 </tr>
                 <tr>
                     <th class="th1">Date d'Entrée:</th>
-                    <td><input type="date" name="" class="inpt1"></td>
+                    <td><input type="date" name="dateEn" class="inpt1"></td>
                 </tr>
                 <tr>
                     <th class="th1">Quantité:</th>
-                    <td><input type="number" name="" class="inpt1" placeholder="quantite..."></td>
+                    <td><input type="number" name="quantite" class="inpt1" placeholder="quantite..."></td>
                 </tr>
                 <tr>
                     <th class="th1">Prix d'achat:</th>
-                    <td><input type="text" name="" class="inpt1" placeholder="prix d'achat..."></td>
+                    <td><input type="text" name="prixA" class="inpt1" placeholder="prix d'achat..."></td>
                 </tr>
                 <tr>
                     <th class="th1">Fournisseur:</th>
