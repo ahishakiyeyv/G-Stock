@@ -80,6 +80,7 @@ include("database.php");
                        <tr>
                            <th class="th2-pro">Code Produit</th>
                            <th class="th2-pro">Nom Produit</th>
+                           <th colspan="2" class="th2-pro">Actions</th>
                        </tr>
                    </thead>
                    <?php

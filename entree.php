@@ -8,7 +8,7 @@ include("database.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Entrée Stock</title>
 </head>
 <body>
@@ -52,7 +52,24 @@ include("database.php");
             <table>
                 <tr>
                      <th class="th1">Code Produit:</th>
-                     <td><input type="text" name="codepro" class="inpt1" placeholder="code produit..."></td>
+                     <td>
+                         <select name="codepro" class="inpt1"> 
+                         <option value="">---Code Produit---</option>
+                         <?php 
+                         
+                        $reponse=$bdd->query("SELECT CodePro FROM produit ORDER BY id_pro ASC");
+                        while($data=$reponse->fetch()){
+                            ?>
+                            
+                            <option value="<?php echo $data["CodePro"]?>"><?php echo $data["CodePro"]?></option>
+                            <?php
+                        }
+                        ?>
+                     <!-- <input type="text" name="codepro" class="inpt1" placeholder="code produit..."> -->
+                     
+                  
+                     </select>
+                     </td>
                 </tr>
                 <tr>
                      <th class="th1">Designation:</th>
@@ -60,7 +77,19 @@ include("database.php");
                 </tr>
                 <tr>
                      <th class="th1">Categorie:</th>
-                    <td><input type="text" name="categorie" class="inpt1" placeholder="categorie..."></td>
+                    <td>
+                        <select name="categorie" class="inpt1">
+                            <option value="">---Categorie---</option>
+                        <?php
+                        $req=$bdd->query("SELECT nom_cat FROM categorie ORDER BY id_cat ASC");
+                        while($data=$req->fetch()){
+                        ?>
+                        <option value="<?php echo $data["nom_cat"]?>"><?php echo $data["nom_cat"]?></option>
+                        <?php
+                        }
+                        ?>
+                        </select>
+                    <!-- <input type="text" name="categorie" class="inpt1" placeholder="categorie..."></td> -->
                 </tr>
                 <tr>
                     <th class="th1">Date d'Entrée:</th>
@@ -76,17 +105,34 @@ include("database.php");
                 </tr>
                 <tr>
                     <th class="th1">Fournisseur:</th>
-                    <td><input type="text" name="" class="inpt1" placeholder="fournisseur..."></td>
+                    <td>
+                    <select name="fournis" class="inpt1">
+                        <option value="">---Fournisseur---</option>
+                        <?php
+                        $rep=$bdd->query("SELECT nom_fourn FROM fournisseur ORDER BY id_fourn");
+                        while($data=$rep->fetch()){
+                        ?>
+                        <option value="<?php echo $data["nom_fourn"]?>"><?php echo $data["nom_fourn"]?></option>
+                            <?php
+                        }
+                            ?>
+                    </select>    
+                    <!-- <input type="text" name="" class="inpt1" placeholder="fournisseur..."> -->
+                
+                </td>
                 </tr>
                 <tr>
                     <th></th>
-                    <td><input type="submit" value="Ajouter" id="sub1">
+                    <td><input type="submit" value="Ajouter" id="sub1" name="submit">
                     <input type="reset" value="Annuler" id="res1"></td>
                 </tr>
             </table>
             </form>
             </fieldset>
         </div>
+        <?php
+            $recup=$bdd->query("SELECT * FROM stock ORDER BY id_stock ASC LIMIT 10");
+        ?>
         <div class="tab-recup">
             <h3 class="s-title1">Liste des Entrées</h3>
             <fieldset class="fieldset1">
@@ -104,17 +150,24 @@ include("database.php");
                        </tr>
                    </thead>
                    <tbody class="tbody">
+                       <?php
+                        while($data=$recup->fetch()){
+                       ?>
                        <tr>
-                           <td class="td2"></td>
-                           <td class="td2"></td>
-                           <td class="td2"></td>
-                           <td class="td2"></td>
-                           <td class="td2"></td>
-                           <td class="td2"></td>
-                           <td class="td2"></td>
-                           <td class="td2"></td>
-                           <td class="td2"></td>
+                           <td class="td2"><?php echo $data["CodePro"]?></td>
+                           <td class="td2"><?php echo $data["Designation"]?></td>
+                           <td class="td2"><?php echo $data["Categorie"]?></td>
+                           <td class="td2"><?php echo $data["date_Entre"]?></td>
+                           <td class="td2"><?php echo $data["Quantite"]?></td>
+                           <td class="td2"><?php echo $data["Prix_Achat"]?></td>
+                           <td class="td2"><?php echo $data["fournisseur"]?></td>
+                           <td class="td2">Modifier</td>
+                           <td class="td2">Supprimer</td>
+                          
                        </tr>
+                       <?php
+                        }
+                       ?>
                    </tbody>
                 </table>
             </fieldset>
@@ -123,3 +176,17 @@ include("database.php");
     </div>
 </body>
 </html>
+<?php
+if(isset($_POST["submit"])){
+    $code=$_POST["codepro"];
+    $designation=$_POST["designation"];
+    $categorie=$_POST["categorie"];
+    $dateEn=$_POST["dateEn"];
+    $quantite=$_POST["quantite"];
+    $prix=$_POST["prixA"];
+    $fournisseur=$_POST["fournis"];
+    $insertion=$bdd->prepare("INSERT INTO stock(CodePro,Designation,Categorie,date_Entre,Quantite,Prix_Achat,fournisseur)VALUES(?,?,?,?,?,?,?)");
+    $insertion->execute(array($code,$designation,$categorie,$dateEn,$quantite,$prix,$fournisseur));
+
+}
+?>
