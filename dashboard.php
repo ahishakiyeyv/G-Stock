@@ -32,16 +32,16 @@ include("database.php");
     <nav>
         <div class="menu-link">
             <ul>
-                <li><a href="dashboard.php">Dashboard    <i class="fas fa-tachometer-alt"></i></a></li>
-                <li><a href="entree.php">Entrée    <i class="fas fa-cart-plus"></i></a></li>
-                <li><a href="sortie.php">Sortie    <i class="fas fa-shopping-bag"></i></a></li>
-                <li><a href="produit.php">Produit    <i class="fas fa-dolly-flatbed"></i></a></li>
-                <li><a href="stock.php">Stock   <i class="fas fa-warehouse"></i></a></li>
-                <li><a href="fournisseur.php">Fournisseur     <i class="fas fa-user-plus"></i></a></li>
-                <li><a href="categorie.php">Categorie     <i class="fas fa-sort"></i></a></li>
-                <li><a href="journal.php">Journal     <i class="fas fa-newspaper"></i></a></li>
-                <li><a href="utilisateur.php">Utilisateur     <i class="fas fa-users"></i></a></li>
-                <li><a href="statistique.php">Statistique    <i class="fas fa-chart-line"></i></a></li>
+                <li><a href="dashboard.php"><i class="fas fa-tachometer-alt"></i>  --  Dashboard</a></li>
+                <li><a href="entree.php"><i class="fas fa-cart-plus"></i>   --   Entrée</a></li>
+                <li><a href="sortie.php"><i class="fas fa-shopping-bag"></i>  --  Sortie</a></li>
+                <li><a href="produit.php"><i class="fas fa-dolly-flatbed"></i>   --   Produit </a></li>
+                <li><a href="stock.php"><i class="fas fa-warehouse"></i>   --     Stock </a></li>
+                <li><a href="fournisseur.php"><i class="fas fa-user-plus"></i>   --   Fournisseur</a></li>
+                <li><a href="categorie.php"><i class="fas fa-sort"></i>      --   Categorie</a></li>
+                <li><a href="journal.php"><i class="fas fa-newspaper"></i>   --   Journal</a></li>
+                <li><a href="utilisateur.php"><i class="fas fa-users"></i>   --  Utilisateur</a></li>
+                <li><a href="statistique.php"><i class="fas fa-chart-line"></i>     --    Statistique</a></li>
         </div>
     </nav>
     <section>
