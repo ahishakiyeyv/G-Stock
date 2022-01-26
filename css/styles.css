@@ -377,6 +377,9 @@ table .th-stock .td-stock{
     font-family: Arial, Helvetica, sans-serif;
     padding:15px;
 }
+.td-stock{
+    text-align: center;
+}
 /*==================================================================================*/
 /*===========================fournisseur======================*/
 .title-four{

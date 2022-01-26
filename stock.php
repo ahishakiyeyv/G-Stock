@@ -9,7 +9,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Stock</title>
 </head>
 <body>
@@ -45,7 +45,10 @@ include("database.php");
         </div>
     </nav>
     <?php
-    $stock=$bdd->query("SELECT E.*,S.* FROM entreestock E, sortiestock S WHERE CodePro=codepro");
+    $stock=$bdd->query("SELECT E.CodePro,E.Categorie,E.Quantite,E.Prix_Achat,P.*,S.* FROM produit P,entreestock E,sortiestock S WHERE E.CodePro=P.CodePro AND S.codepro=P.codepro");
+    $stockee=$bdd->query("SELECT qte_stock FROM stock");
+    $entree=$bdd->query("SELECT Quantite FROM entreestock");
+    $sortie=$bdd->query("SELECT qte_sortie FROM sortiestock");
     ?>
     <section>
         <h2 class="title-stock">En Stock</h2>
@@ -60,8 +63,7 @@ include("database.php");
                            <th class="th-stock">Categorie</th>
                            <th class="th-stock">Quantite</th>
                            <th class="th-stock">Prix</th>
-                           <th class="th-stock">Date</th>
-                           <th class="th-stock" colspan="2">Actions</th>
+                           <th class="th-stock" colspan="3">Actions</th>
                        </tr>
                    </thead>
                    <tbody class="tbody-stock">
@@ -69,11 +71,11 @@ include("database.php");
                        while($datastock=$stock->fetch()){
                        ?>
                        <tr>
-                           <td class="td-stock"><?php echo $datastock[""]?></td>
-                           <td class="td-stock"></td>
-                           <td class="td-stock"></td>
-                           <td class="td-stock"></td>
-                           <td class="td-stock"></td>
+                           <td class="td-stock"><?php echo $datastock["CodePro"]?></td>
+                           <td class="td-stock"><?php echo $datastock["nomPro"]?></td>
+                           <td class="td-stock"><?php echo $datastock["Categorie"]?></td>
+                           <td class="td-stock"><?php echo $datastock["Quantite"]-$datastock["qte_sortie"]?></td>
+                           <td class="td-stock"><?php echo $datastock["Prix_Achat"]?></td>
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>

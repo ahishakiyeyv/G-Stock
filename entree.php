@@ -186,7 +186,7 @@ if(isset($_POST["submit"])){
     $quantite=$_POST["quantite"];
     $prix=$_POST["prixA"];
     $fournisseur=$_POST["fournis"];
-    $insertion=$bdd->prepare("INSERT INTO stock(CodePro,Designation,Categorie,date_Entre,Quantite,Prix_Achat,fournisseur)VALUES(?,?,?,?,?,?,?)");
+    $insertion=$bdd->prepare("INSERT INTO entreestock(CodePro,Designation,Categorie,date_Entre,Quantite,Prix_Achat,fournisseur)VALUES(?,?,?,?,?,?,?)");
     $insertion->execute(array($code,$designation,$categorie,$dateEn,$quantite,$prix,$fournisseur));
 
 }
