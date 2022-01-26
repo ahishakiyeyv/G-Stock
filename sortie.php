@@ -142,11 +142,10 @@ include("database.php");
                            <td class="td-sort"><?php echo $datarecup["date_sortie"]?></td>
                            <td class="td-sort">Modifier</td>
                            <td class="td-sort">Supprimer</td>
-                           <?php
+                       </tr>
+                       <?php
                             }
                            ?>
-                           
-                       </tr>
                    </tbody>
                 </table>
             </fieldset>

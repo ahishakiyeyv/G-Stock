@@ -132,7 +132,7 @@ include("database.php");
             </fieldset>
         </div>
         <?php
-            $recup=$bdd->query("SELECT * FROM stock ORDER BY id_stock ASC LIMIT 10");
+            $recup=$bdd->query("SELECT * FROM entreestock ORDER BY id_stock ASC LIMIT 10");
         ?>
         <div class="tab-recup">
             <h3 class="s-title1">Liste des Entrées</h3>

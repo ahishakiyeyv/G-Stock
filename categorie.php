@@ -77,10 +77,10 @@ include("database.php");
                            <th class="th2-cat"colspan="2">Actions</th>
                        </tr>
                    </thead>
+                   <tbody class="tbody-cat">
                    <?php
                    while($dataselect=$select->fetch()){
                    ?>
-                   <tbody class="tbody-cat">
                        <tr>
                            <td class="td-cat"><?php echo $dataselect["nom_cat"];?></td>
                            <td class="td-cat">Modifier</td>

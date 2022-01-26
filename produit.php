@@ -84,10 +84,10 @@ include("database.php");
                            <th colspan="2" class="th2-pro">Actions</th>
                        </tr>
                    </thead>
+                   <tbody class="tbody-pro">
                    <?php
                    while($dataselect=$select->fetch()){
                    ?>
-                   <tbody class="tbody-pro">
                        <tr>
                            <td class="td-pro"><?php echo $dataselect["CodePro"];?></td>
                            <td class="td-pro"><?php echo $dataselect["nomPro"];?></td>

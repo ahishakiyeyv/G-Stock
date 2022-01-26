@@ -90,11 +90,11 @@ include("database.php");
                            <th class="th2-user">Mot de Passe</th>
                            <th class="th2-user"colspan="3">Actions</th>
                        </tr>
+                   <tbody class="tbody-user">
                    </thead>
                    <?php
                    while($dataselection=$selection->fetch()){
                    ?>
-                   <tbody class="tbody-user">
                        <tr>
                            <td class="td-user"><?php echo $dataselection["nom_util"]?></td>
                            <td class="td-user"><?php echo $dataselection["prenom_util"]?></td>

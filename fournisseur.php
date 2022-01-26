@@ -92,10 +92,10 @@ $select=$bdd->query("SELECT * FROM fournisseur ORDER BY id_fourn ASC LIMIT 5");
                            <th class="th2-fourn"colspan="2">Actions</th>
                        </tr>
                    </thead>
+                   <tbody class="tbody-fourn">
                    <?php
                    while($dataselect=$select->fetch()){
                    ?>
-                   <tbody class="tbody-fourn">
                        <tr>
                            <td class="td-fourn"><?php echo $dataselect["nom_fourn"]?></td>
                            <td class="td-fourn"><?php echo $dataselect["prenom_fourn"]?></td>
