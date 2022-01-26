@@ -44,6 +44,9 @@ include("database.php");
                 <li><a href="statistique.php"><i class="fas fa-chart-line"></i>     --    Statistique</a></li>
         </div>
     </nav>
+    <?php
+    $stock=$bdd->query("SELECT E.*,S.* FROM entreestock E, sortiestock S WHERE CodePro=codepro");
+    ?>
     <section>
         <h2 class="title-stock">En Stock</h2>
         <div class="table-stock">
@@ -55,13 +58,19 @@ include("database.php");
                            <th class="th-stock">Code Produit</th>
                            <th class="th-stock">Designation</th>
                            <th class="th-stock">Categorie</th>
-                           <th class="th-stock">Date</th>
-                           <th class="th-stock">Quantite Restant</th>
+                           <th class="th-stock">Quantite</th>
                            <th class="th-stock">Prix</th>
+                           <th class="th-stock">Date</th>
+                           <th class="th-stock" colspan="2">Actions</th>
                        </tr>
                    </thead>
                    <tbody class="tbody-stock">
+                       <?php
+                       while($datastock=$stock->fetch()){
+                       ?>
                        <tr>
+                           <td class="td-stock"><?php echo $datastock[""]?></td>
+                           <td class="td-stock"></td>
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>
@@ -69,6 +78,9 @@ include("database.php");
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>
                        </tr>
+                       <?php
+                       }
+                       ?>
                    </tbody>
                 </table>
             </fieldset>
