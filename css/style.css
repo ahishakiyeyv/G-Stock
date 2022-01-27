@@ -641,21 +641,53 @@ table .th2-user .td-user{
 }
 /*===========================================================================*/
 /*=======================Profil================================*/
-.container{
+#container{
     background-image: url("../images/01.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: space-between;
 }
+/* .container1{
+  
+} */
 .contain{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
     background:black;
-    width:700px;
+    opacity:0.9;
+    border-radius: 5px;
+    width:1000px;
+    height:500px;
+   margin-top: 50px;
 }
 .img-prof{
+    margin:100px;
+    height:300px;
+    width:250px;
+}
+.img-contain{
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     height:300px;
     width:250px;
 }
 .desc{
+    margin:70px;
     width:400px;
+}
+.desc1{
+    letter-spacing: 8px;
+    color:ivory;
+}
+.admin-name{
+    letter-spacing: 8px;
+    color:ivory;
+    font-size:40px;
+}
+.ule{
+    margin-top:30px;
+    list-style-type: none;
+}
+.lii{
+    color:ivory;
+    line-height: 40px;
 }
