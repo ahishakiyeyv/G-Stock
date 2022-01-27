@@ -45,7 +45,7 @@ include("database.php");
                 <li><a href="statistique.php"><i class="fas fa-chart-line"></i>     --    Statistique</a></li>
         </div>
     </nav>
-    <section>
+    <section id="section">
         
     </section>
     </div>

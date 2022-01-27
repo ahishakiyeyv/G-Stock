@@ -50,7 +50,7 @@ include("database.php");
     $entree=$bdd->query("SELECT Quantite FROM entreestock");
     $sortie=$bdd->query("SELECT qte_sortie FROM sortiestock");
     ?>
-    <section>
+    <section id="section">
         <h2 class="title-stock">En Stock</h2>
         <div class="table-stock">
             <h3 class="titlestock">Liste des produits en stock</h3>

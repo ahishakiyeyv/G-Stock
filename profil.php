@@ -14,7 +14,7 @@
     <section class="container">
         <div class="contain">
             <div class="img-prof">
-                <img src="images/" alt="images non disponible" class="img-contain">
+                <img src="images/2.jpg" alt="images non disponible" class="img-contain">
             </div>
             <div class="desc">
                 <div class="description">
