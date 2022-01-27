@@ -20,7 +20,7 @@ include("database.php");
             </div>
             <div class="txt">
                 <h3>Admin</h3>
-                <p><a href="#" class="voir">voir profil</a></p>
+                <p><a href="profil" class="voir">voir profil</a></p>
             </div>
             </div>
             <div class="log-out">
@@ -53,7 +53,7 @@ include("database.php");
                 <table>
                 <tr>
                      <th class="th-user">Nom</th>
-                        <th><input type="text" name="nom" class="inpt-user"placeholder="Nom..."></th>
+                        <th><input type="text" name="nom" class="inpt-user"placeholder="Nom..." ></th>
                     </tr>
                     <tr>
                      <th class="th-user">Prenom</th>
@@ -61,7 +61,7 @@ include("database.php");
                     </tr>
                     <tr>
                      <th class="th-user">Email</th>
-                        <th><input type="text" name="email" class="inpt-user"placeholder="Email..."></th>
+                        <th><input type="text" name="email" class="inpt-user"placeholder="Email..." required></th>
                     </tr>
                     <tr>
                      <th class="th-user">Adresse</th>
@@ -73,7 +73,7 @@ include("database.php");
                     </tr>
                     <tr>
                      <th class="th-user">Mot de Passe</th>
-                        <td><input type="password" name="motdepasse" class="inpt-user" placeholder="Mot de Passe..."></td>
+                        <td><input type="password" name="motdepasse" class="inpt-user" placeholder="Mot de Passe..." required></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Ajouter" id="sub-user" name="submit"></td>
@@ -135,7 +135,7 @@ include("database.php");
         $adresse=$_POST["adresse"];
         $phone=$_POST["phone"];
         $password=$_POST["motdepasse"];
-        $insertion=$bdd->prepare("INSERT INTO utilisateur(nom_util,prenom_util,email_util,adresse_util,phone_util,password_util)VALUES(?,?,?,?)");
+        $insertion=$bdd->prepare("INSERT INTO utilisateur(nom_util,prenom_util,email_util,adresse_util,phone_util,password_util)VALUES(?,?,?,?,?,?)");
         $insertion->execute(array($name,$surname,$mail,$adresse,$phone,$password));
     }
 ?>

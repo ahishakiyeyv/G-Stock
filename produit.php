@@ -21,7 +21,7 @@ include("database.php");
             </div>
             <div class="txt">
                 <h3>Admin</h3>
-                <p><a href="#" class="voir">voir profil</a></p>
+                <p><a href="profil.php" class="voir">voir profil</a></p>
             </div>
             </div>
             <div class="log-out">

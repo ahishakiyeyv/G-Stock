@@ -67,12 +67,12 @@ header{
     font-size: 20px;
     padding:15px;
     width:120%;
-    text-align: center;
 }
 .menu-link ul li a{
     text-decoration: none;
     color:ivory;
     padding:15px;
+    text-align: right;
 }
 .menu-link ul li:hover{
     background:gray;
@@ -622,14 +622,14 @@ table .th2-user .td-user{
 .th2-user{
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    padding:8px;
+    padding:10px;
 }
 .td-user{
     padding:10px;
 }
 .fieldset01{
     width:750px;
-    margin-left: 180px;
+    margin-left:50px;
 }
 /*============================================================================*/
 /*=========================statistique=========================*/
@@ -638,4 +638,14 @@ table .th2-user .td-user{
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
+}
+/*===========================================================================*/
+/*=======================Profil================================*/
+.container{
+    background-image: url("../images/01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contain{
+    background:black;
 }
