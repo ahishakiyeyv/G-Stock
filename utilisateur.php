@@ -64,6 +64,14 @@ include("database.php");
                         <th><input type="text" name="email" class="inpt-user"placeholder="Email..."></th>
                     </tr>
                     <tr>
+                     <th class="th-user">Adresse</th>
+                        <th><input type="text" name="adresse" class="inpt-user"placeholder="Adresse..."></th>
+                    </tr>
+                    <tr>
+                     <th class="th-user">Telephone</th>
+                        <th><input type="text" name="phone" class="inpt-user"placeholder="Telephone..."></th>
+                    </tr>
+                    <tr>
                      <th class="th-user">Mot de Passe</th>
                         <td><input type="password" name="motdepasse" class="inpt-user" placeholder="Mot de Passe..."></td>
                     </tr>
@@ -87,6 +95,8 @@ include("database.php");
                        <th class="th2-user">Nom</th>
                            <th class="th2-user">Prenom</th>
                            <th class="th2-user">Email</th>
+                           <th class="th2-user">Adresse</th>
+                           <th class="th2-user">Telephone</th>
                            <th class="th2-user">Mot de Passe</th>
                            <th class="th2-user"colspan="3">Actions</th>
                        </tr>
@@ -99,6 +109,8 @@ include("database.php");
                            <td class="td-user"><?php echo $dataselection["nom_util"]?></td>
                            <td class="td-user"><?php echo $dataselection["prenom_util"]?></td>
                            <td class="td-user"><?php echo $dataselection["email_util"]?></td>
+                           <td class="td-user"><?php echo $dataselection["adresse_util"]?></td>
+                           <td class="td-user"><?php echo $dataselection["phone_util"]?></td>
                            <td class="td-user"><?php echo $dataselection["password_util"]?></td>
                            <td class="td-user">Modifier</td>
                            <td class="td-user">Supprimer</td>
@@ -120,8 +132,10 @@ include("database.php");
         $name=$_POST["nom"];
         $surname=$_POST["prenom"];
         $mail=$_POST["email"];
+        $adresse=$_POST["adresse"];
+        $phone=$_POST["phone"];
         $password=$_POST["motdepasse"];
-        $insertion=$bdd->prepare("INSERT INTO utilisateur(nom_util,prenom_util,email_util,password_util)VALUES(?,?,?,?)");
-        $insertion->execute(array($name,$surname,$mail,$password));
+        $insertion=$bdd->prepare("INSERT INTO utilisateur(nom_util,prenom_util,email_util,adresse_util,phone_util,password_util)VALUES(?,?,?,?)");
+        $insertion->execute(array($name,$surname,$mail,$adresse,$phone,$password));
     }
 ?>
