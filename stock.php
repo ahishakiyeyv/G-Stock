@@ -49,6 +49,10 @@ include("database.php");
     $stockee=$bdd->query("SELECT qte_stock FROM stock");
     $entree=$bdd->query("SELECT Quantite FROM entreestock");
     $sortie=$bdd->query("SELECT qte_sortie FROM sortiestock");
+    if(isset($_GET["supp"])){
+        $id=$_GET["supp"];
+        $delete=$bdd->EXEC("DELETE FROM stock WHERE id_stock=$id");
+    }
     ?>
     <section id="section">
         <h2 class="title-stock">En Stock</h2>
@@ -76,7 +80,7 @@ include("database.php");
                            <td class="td-stock"><?php echo $datastock["Categorie"]?></td>
                            <td class="td-stock"><?php echo $datastock["Quantite"]-$datastock["qte_sortie"]?></td>
                            <td class="td-stock"><?php echo $datastock["Prix_Achat"]?></td>
-                           <td class="td-stock"></td>
+                           <td class="td-stock"><a href="stock.php?supp=<?php echo $datastock["id_stock"]?>">Supprimer</a></td>
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>
                        </tr>

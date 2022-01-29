@@ -73,6 +73,10 @@ include("database.php");
         <div class="recup-pro">
             <?php
             $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro ASC LIMIT 10");
+            if(isset($_GET["supp"])){
+                $idtodelete=$_GET["supp"];
+                $delete=$bdd->EXEC("DELETE FROM produit WHERE id_pro=$idtodelete");
+            }
             ?>
         <h3 class="stitle-pro">Listes Produits</h3>
             <fieldset class="fieldset003">
@@ -91,8 +95,8 @@ include("database.php");
                        <tr>
                            <td class="td-pro"><?php echo $dataselect["CodePro"];?></td>
                            <td class="td-pro"><?php echo $dataselect["nomPro"];?></td>
+                           <td class="td-pro"><a href="produit.php?supp=<?php echo $dataselect["id_pro"]?>"></a></td>
                            <td class="td-pro">Modifier</td>
-                           <td class="td-pro">Supprimer</td>
                        </tr>
                        <?php
                    }

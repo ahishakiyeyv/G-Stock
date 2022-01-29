@@ -144,7 +144,7 @@ include("database.php");
                            <td class="td-sort"><?php echo $datarecup["qte_sortie"]?></td>
                            <td class="td-sort"><?php echo $datarecup["Prix_Achat"]?></td>
                            <td class="td-sort"><?php echo $datarecup["date_sortie"]?></td>
-                           <td class="td-sort"><a href="sortie.php?supp=<?php echo $datarecup["id_sortie"]?>"></a></td>
+                           <td class="td-sort"><a href="sortie.php?supp=<?php echo $datarecup["id_sortie"]?>">Supprimer</a></td>
                            <td class="td-sort">Supprimer</td>
                        </tr>
                        <?php

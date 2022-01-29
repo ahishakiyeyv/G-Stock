@@ -85,6 +85,10 @@ include("database.php");
         </div>
         <?php
         $selection=$bdd->query("SELECT * FROM utilisateur ORDER BY id_util LIMIT 5");
+        if(isset($_GET["supp"])){
+            $iddelete=$_GET["supp"];
+            $delete=$bdd->EXEC("DELETE FROM utilisateur WHERE id_util=$iddelete");
+        }
         ?>
         <div class="recup-user">
         <h3 class="s-tituser">Liste des Utilisateurs</h3>
@@ -112,8 +116,8 @@ include("database.php");
                            <td class="td-user"><?php echo $dataselection["adresse_util"]?></td>
                            <td class="td-user"><?php echo $dataselection["phone_util"]?></td>
                            <td class="td-user"><?php echo $dataselection["password_util"]?></td>
+                           <td class="td-user"><a href="utilisateur.php?supp=<?php echo $dataselection["id_util"]?>">Supprimer</a></td>
                            <td class="td-user">Modifier</td>
-                           <td class="td-user">Supprimer</td>
                            <td class="td-user">Activer</td>
                        </tr>
                        <?php

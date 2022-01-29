@@ -78,6 +78,10 @@ include("database.php");
         </div>
 <?php
 $select=$bdd->query("SELECT * FROM fournisseur ORDER BY id_fourn ASC LIMIT 5");
+if(isset($_GET["supp"])){
+    $idtodelete=$_GET["supp"];
+    $delete=$bdd->EXEC("DELETE FROM fournisseur WHERE id_fourn=$idtodelete");
+}
 ?>
         <div class="recup-fourn">
             <h3 class="stit-fourn">Liste des Fournisseurs</h3>
@@ -101,8 +105,8 @@ $select=$bdd->query("SELECT * FROM fournisseur ORDER BY id_fourn ASC LIMIT 5");
                            <td class="td-fourn"><?php echo $dataselect["prenom_fourn"]?></td>
                            <td class="td-fourn"><?php echo $dataselect["addresse_fourn"]?></td>
                            <td class="td-fourn"><?php echo $dataselect["telephone_fourn"]?></td>
+                           <td class="td-fourn"><a href="fournisseur.php?supp=<?php echo $dataselect["id_fourn"]?>">Supprimer</a></td>
                            <td class="td-fourn">Modifier</td>
-                           <td class="td-fourn">supprimer</td>
                            
                        </tr>
                        <?php

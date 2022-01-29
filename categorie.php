@@ -66,6 +66,10 @@ include("database.php");
         </div>
         <?php
         $select=$bdd->query("SELECT * FROM categorie ORDER BY id_cat ASC LIMIT 5");
+        if(isset($_GET["supp"])){
+            $id_to_delete=$_GET["supp"];
+            $delete=$bdd->EXEC("DELETE FROM categorie WHERE id_cat=$id_to_delete");
+        }
         ?>
         <div class="recup-cat">
             <h3 class="s-titcat2">Liste des categories</h3>
@@ -83,8 +87,8 @@ include("database.php");
                    ?>
                        <tr>
                            <td class="td-cat"><?php echo $dataselect["nom_cat"];?></td>
+                           <td class="td-cat"><a href="categorie.php?supp?=<?php echo $dataselect["id_cat"]?>">Supprimer</a></td>
                            <td class="td-cat">Modifier</td>
-                           <td class="td-cat">Supprimer</td>
                        </tr>
                        <?php
                    }
