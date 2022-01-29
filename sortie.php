@@ -113,6 +113,10 @@ include("database.php");
         </div>
         <?php
             $recup=$bdd->query("SELECT * FROM sortiestock ORDER BY id_sortie ASC");
+            if(isset($_GET["supp"])){
+                $idtodelete=$_GET["supp"];
+                $delete=$bdd->EXEC("DELETE FROM sortiestock WHERE id_sortie=$idtodelete");
+            }
         ?>
         <div class="recup-sort">
             <h3 class="stitle-recup">   Produits sortie</h3>
@@ -140,7 +144,7 @@ include("database.php");
                            <td class="td-sort"><?php echo $datarecup["qte_sortie"]?></td>
                            <td class="td-sort"><?php echo $datarecup["Prix_Achat"]?></td>
                            <td class="td-sort"><?php echo $datarecup["date_sortie"]?></td>
-                           <td class="td-sort">Modifier</td>
+                           <td class="td-sort"><a href="sortie.php?supp=<?php echo $datarecup["id_sortie"]?>"></a></td>
                            <td class="td-sort">Supprimer</td>
                        </tr>
                        <?php

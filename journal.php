@@ -45,11 +45,92 @@ include("database.php");
         </div>
     </nav>
     <section id="section">
+    <?php
+            $recup=$bdd->query("SELECT * FROM entreestock ORDER BY id_stock ASC LIMIT 10");
+        ?>
         <div class="journ">
             <h2 class="title-journ1">Journal d'Entrée</h2>
+            <div class="tab-recup">
+            <!-- <h3 class="s-title1">Liste des Entrées</h3> -->
+            <fieldset class="fieldset1">
+                <table>
+                   <thead class="thead">
+                       <tr>
+                           <th class="th2">Code Produit</th>
+                           <th class="th2">Designation</th>
+                           <th class="th2">Categorie</th>
+                           <th class="th2">Date d'Entrée</th>
+                           <th class="th2">Quantite</th>
+                           <th class="th2">Prix d'Achat</th>
+                           <th class="th2">Fournisseur</th>
+                           <th class="th2"colspan="2">Actions</th>
+                       </tr>
+                   </thead>
+                   <tbody class="tbody">
+                       <?php
+                        while($data=$recup->fetch()){
+                       ?>
+                       <tr>
+                           <td class="td2"><?php echo $data["CodePro"]?></td>
+                           <td class="td2"><?php echo $data["Designation"]?></td>
+                           <td class="td2"><?php echo $data["Categorie"]?></td>
+                           <td class="td2"><?php echo $data["date_Entre"]?></td>
+                           <td class="td2"><?php echo $data["Quantite"]?></td>
+                           <td class="td2"><?php echo $data["Prix_Achat"]?></td>
+                           <td class="td2"><?php echo $data["fournisseur"]?></td>
+                           <td class="td2">Modifier</td>
+                           <td class="td2">Supprimer</td>
+                          
+                       </tr>
+                       <?php
+                        }
+                       ?>
+                   </tbody>
+                </table>
+            </fieldset>
         </div>
+        </div>
+        <?php
+            $recup=$bdd->query("SELECT * FROM sortiestock ORDER BY id_sortie ASC");
+        ?>
         <div class="journ1">
             <h2 class="title-journ2">Journal de Sortie</h2>
+            <div class="recup-sort">
+            <!-- <h3 class="stitle-recup">   Produits sortie</h3> -->
+            <fieldset class="fieldset3">
+            <table>
+                   <thead class="thead-sort">
+                       <tr>
+                           <th class="th2-sort">Code Produit</th>
+                           <th class="th2-sort">Designation</th>
+                           <th class="th2-sort">Categorie</th>
+                           <th class="th2-sort">Quantite sortie</th>
+                           <th class="th2-sort">Prix</th>
+                           <th class="th2-sort">Date sortie</th>
+                           <th class="th2-sort"colspan="2">Actions</th>
+                       </tr>
+                   </thead>
+                   <tbody class="tbody-sort">
+                       <?php
+                        while($datarecup=$recup->fetch()){
+                       ?>
+                       <tr>
+                           <td class="td-sort"><?php echo $datarecup["codepro"]?></td>
+                           <td class="td-sort"><?php echo $datarecup["designation"]?></td>
+                           <td class="td-sort"><?php echo $datarecup["categorie"]?></td>
+                           <td class="td-sort"><?php echo $datarecup["qte_sortie"]?></td>
+                           <td class="td-sort"><?php echo $datarecup["Prix_Achat"]?></td>
+                           <td class="td-sort"><?php echo $datarecup["date_sortie"]?></td>
+                           <td class="td-sort">Modifier</td>
+                           <td class="td-sort">Supprimer</td>
+                       </tr>
+                       <?php
+                            }
+                           ?>
+                   </tbody>
+                </table>
+            </fieldset>
+        </div>
         </div>
     </section>
     </div>

@@ -133,7 +133,14 @@ include("database.php");
         </div>
         <?php
             $recup=$bdd->query("SELECT * FROM entreestock ORDER BY id_stock ASC LIMIT 10");
+        if(isset($_GET["supp"])){
+            $id_to_delete=$_GET["supp"];
+            $delete=$bdd->EXEC("DELETE FROM entreestock WHERE id_stock=$id_to_delete");
+        }
+        
         ?>
+
+
         <div class="tab-recup">
             <h3 class="s-title1">Liste des Entrées</h3>
             <fieldset class="fieldset1">
@@ -162,8 +169,8 @@ include("database.php");
                            <td class="td2"><?php echo $data["Quantite"]?></td>
                            <td class="td2"><?php echo $data["Prix_Achat"]?></td>
                            <td class="td2"><?php echo $data["fournisseur"]?></td>
+                           <td class="td2"><a href="entree.php?sup=<?php echo $data["id_stock"]?>">Supprimer</a> </td>
                            <td class="td2">Modifier</td>
-                           <td class="td2">Supprimer</td>
                           
                        </tr>
                        <?php
