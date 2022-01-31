@@ -11,7 +11,7 @@ include("database.php");
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Produit</title>
+    <title>Tableau de Bord</title>
 </head>
 <body>
 <header>
@@ -46,19 +46,24 @@ include("database.php");
         </div>
     </nav>
     <section id="section">
-    <h2 class="title_pro">Produit</h2>
-        <div class="aj_produit">
+        <?php
+        if(isset($_GET["mod"])){
+            $select=$bdd->query("SELECT * FROM produit WHERE id_pro=".$_GET["mod"]."");
+            $data=$select->fetch();
+        }
+        ?>
+    <div class="aj_produit">
             <h3 class="stitlepro">Ajouter un produit</h3>
             <fieldset class="fieldset002">
                 <form action="" method="post">
                     <table>
                         <tr>
                             <th class="th-pro">Code Produit</th>
-                            <td><input type="text" name="code" class="inpt-pro" placeholder="Code Produit..." required></td>
+                            <td><input type="text" name="code" class="inpt-pro" placeholder="Code Produit..." value="<?php echo $data["CodePro"]?>" required></td>
                         </tr>
                         <tr>
                             <th class="th-pro">Nom Produit</th>
-                            <td><input type="text" name="nompro" class="inpt-pro" placeholder="Nom..." required></td>
+                            <td><input type="text" name="nompro" class="inpt-pro" placeholder="Nom..." value="<?php echo $data["nomPro"]?>" required></td>
                         </tr>
                         <tr>
                             <th></th>
@@ -70,41 +75,6 @@ include("database.php");
                 </form>
             </fieldset>
         </div>
-        <div class="recup-pro">
-            <?php
-            $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro ASC LIMIT 10");
-            if(isset($_GET["supp"])){
-                $idtodelete=$_GET["supp"];
-                $delete=$bdd->EXEC("DELETE FROM produit WHERE id_pro=$idtodelete");
-            }
-            ?>
-        <h3 class="stitle-pro">Listes Produits</h3>
-            <fieldset class="fieldset003">
-            <table>
-                   <thead class="thead-pro">
-                       <tr>
-                           <th class="th2-pro">Code Produit</th>
-                           <th class="th2-pro">Nom Produit</th>
-                           <th colspan="2" class="th2-pro">Actions</th>
-                       </tr>
-                   </thead>
-                   <tbody class="tbody-pro">
-                   <?php
-                   while($dataselect=$select->fetch()){
-                   ?>
-                       <tr>
-                           <td class="td-pro"><?php echo $dataselect["CodePro"];?></td>
-                           <td class="td-pro"><?php echo $dataselect["nomPro"];?></td>
-                           <td class="td-pro"><a href="produit.php?supp=<?php echo $dataselect["id_pro"]?>">Supprimer</a></td>
-                           <td class="td-pro"><a href="modifierproduit.php?mod=<?php echo $dataselect["id_pro"]?>">Modifer</a></td>
-                       </tr>
-                       <?php
-                   }
-                       ?>
-                   </tbody>
-                </table>
-            </fieldset>
-        </div>
     </section>
     </div>
 </body>
@@ -112,8 +82,7 @@ include("database.php");
 <?php
 if(isset($_POST["submit"])){
     $code=$_POST["code"];
-    $name=$_POST["nompro"];
-    $insert=$bdd->prepare("INSERT INTO produit(CodePro,nomPro)VALUES(?,?)");
-    $insert->execute(array($code,$name));
+    $nom=$_POST["nompro"];
+    $update=$bdd->EXEC("UPDATE produit SET CodePro='$code',nomPro='$nom' WHERE id_pro=".$_GET["mod"]."");
 }
 ?>

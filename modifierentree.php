@@ -1,6 +1,7 @@
 <?php
 include("database.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,10 +11,10 @@ include("database.php");
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Entrée Stock</title>
+    <title>Tableau de Bord</title>
 </head>
 <body>
-    <header>
+<header>
         <div class="admin">
             <div class="img">
                 <img src="images/2.jpg" alt="Image non disponible" height="75" width="75" class="img-admin">
@@ -45,8 +46,14 @@ include("database.php");
         </div>
     </nav>
     <section id="section">
-        <h2 class="title">Entrée en Stock</h2>
-        <div class="tabl1">
+        <?php
+            if(isset($_GET["mod"])){
+                $id_to_update=$_GET["mod"];
+                $select=$bdd->query("SELECT * FROM entreestock WHERE id_stock=$id_to_update");
+                $data=$select->fetch();
+            }
+        ?>
+    <div class="tabl1">
            <h3 class="s-title">Ajouter un produit</h3>
            <fieldset  class="table1">
                <form action="" method="post">
@@ -74,7 +81,7 @@ include("database.php");
                 </tr>
                 <tr>
                      <th class="th1">Designation:</th>
-                     <td><input type="text" name="designation" class="inpt1" placeholder="designation..."></td>
+                     <td><input type="text" name="designation" class="inpt1" placeholder="designation..." value="<?php echo $data["Designation"]?>"></td>
                 </tr>
                 <tr>
                      <th class="th1">Categorie:</th>
@@ -94,15 +101,15 @@ include("database.php");
                 </tr>
                 <tr>
                     <th class="th1">Date d'Entrée:</th>
-                    <td><input type="date" name="dateEn" class="inpt1"></td>
+                    <td><input type="date" name="dateEn" class="inpt1" value="<?php echo $data["date_Entre"]?>"></td>
                 </tr>
                 <tr>
                     <th class="th1">Quantité:</th>
-                    <td><input type="number" name="quantite" class="inpt1" placeholder="quantite..."></td>
+                    <td><input type="number" name="quantite" class="inpt1" placeholder="quantite..." value="<?php echo $data["Quantite"]?>"></td>
                 </tr>
                 <tr>
                     <th class="th1">Prix d'achat:</th>
-                    <td><input type="text" name="prixA" class="inpt1" placeholder="prix d'achat..."></td>
+                    <td><input type="text" name="prixA" class="inpt1" placeholder="prix d'achat..." value="<?php echo $data["Prix_Achat"]?>"></td>
                 </tr>
                 <tr>
                     <th class="th1">Fournisseur:</th>
@@ -131,55 +138,6 @@ include("database.php");
             </form>
             </fieldset>
         </div>
-        <?php
-            $recup=$bdd->query("SELECT * FROM entreestock ORDER BY id_stock ASC LIMIT 10");
-        if(isset($_GET["supp"])){
-            $id_to_delete=$_GET["supp"];
-            $delete=$bdd->EXEC("DELETE FROM entreestock WHERE id_stock=$id_to_delete");
-        }
-        
-        ?>
-
-
-        <div class="tab-recup">
-            <h3 class="s-title1">Liste des Entrées</h3>
-            <fieldset class="fieldset1">
-                <table>
-                   <thead class="thead">
-                       <tr>
-                           <th class="th2">Code Produit</th>
-                           <th class="th2">Designation</th>
-                           <th class="th2">Categorie</th>
-                           <th class="th2">Date d'Entrée</th>
-                           <th class="th2">Quantite</th>
-                           <th class="th2">Prix d'Achat</th>
-                           <th class="th2">Fournisseur</th>
-                           <th class="th2"colspan="2">Actions</th>
-                       </tr>
-                   </thead>
-                   <tbody class="tbody">
-                       <?php
-                        while($data=$recup->fetch()){
-                       ?>
-                       <tr>
-                           <td class="td2"><?php echo $data["CodePro"]?></td>
-                           <td class="td2"><?php echo $data["Designation"]?></td>
-                           <td class="td2"><?php echo $data["Categorie"]?></td>
-                           <td class="td2"><?php echo $data["date_Entre"]?></td>
-                           <td class="td2"><?php echo $data["Quantite"]?></td>
-                           <td class="td2"><?php echo $data["Prix_Achat"]?></td>
-                           <td class="td2"><?php echo $data["fournisseur"]?></td>
-                           <td class="td2"><a href="entree.php?sup=<?php echo $data["id_stock"]?>">Supprimer</a> </td>
-                           <td class="td2"><a href="modifierentree.php?mod?<?php echo $data["id_stock"]?>"></a></td>
-                          
-                       </tr>
-                       <?php
-                        }
-                       ?>
-                   </tbody>
-                </table>
-            </fieldset>
-        </div>
     </section>
     </div>
 </body>
@@ -189,12 +147,10 @@ if(isset($_POST["submit"])){
     $code=$_POST["codepro"];
     $designation=$_POST["designation"];
     $categorie=$_POST["categorie"];
-    $dateEn=$_POST["dateEn"];
+    $date=$_POST["dateEn"];
     $quantite=$_POST["quantite"];
     $prix=$_POST["prixA"];
     $fournisseur=$_POST["fournis"];
-    $insertion=$bdd->prepare("INSERT INTO entreestock(CodePro,Designation,Categorie,date_Entre,Quantite,Prix_Achat,fournisseur)VALUES(?,?,?,?,?,?,?)");
-    $insertion->execute(array($code,$designation,$categorie,$dateEn,$quantite,$prix,$fournisseur));
-
+    $update=$bdd->EXEC("UPDATE entreestock SET CodePro='$code', Designation='$designation', Categorie='$categorie' , date_Entre='$date' , Quantite='$quantite' , Prix_Achat='$prix' , fournisseur='$fournisseur' WHERE id_stock=".$_GET["mods"]."");
 }
 ?>

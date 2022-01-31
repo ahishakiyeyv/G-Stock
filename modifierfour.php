@@ -1,6 +1,7 @@
 <?php
 include("database.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +11,7 @@ include("database.php");
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Fournisseur</title>
+    <title>Modifier Fournisseur</title>
 </head>
 <body>
 <header>
@@ -45,27 +46,32 @@ include("database.php");
         </div>
     </nav>
     <section id="section">
-        <h2 class="title-four">Fournisseur</h2>
-        <div class="fourniss">
+        <?php
+        if(isset($_GET["mod"])){
+            $id=$bdd->query("SELECT * FROM fournisseur WHERE id_fourn=".$_GET["mod"]."");
+            $data=$id->fetch();
+        }
+        ?>
+    <div class="fourniss">
             <h3 class="s-titFourn">Ajouter un Fournisseur</h3>
             <fieldset class="fieldset5">
                 <form action="" method="post">
                 <table>
                     <tr>
                         <th class="th-fourn">Nom</th>
-                        <td><input type="text" name="nomfourn" class="inpt-fourn" placeholder="Nom..."></td>
+                        <td><input type="text" name="nomfourn" class="inpt-fourn" placeholder="Nom..." value="<?php echo $data["nom_fourn"]?>"></td>
                     </tr>
                     <tr>
                         <th class="th-fourn">Prenom</th>
-                        <td><input type="text" name="prenomfourn" class="inpt-fourn" placeholder="Prenom..."></td>
+                        <td><input type="text" name="prenomfourn" class="inpt-fourn" placeholder="Prenom..." value="<?php echo $data["prenom_fourn"]?>"></td>
                     </tr>
                     <tr>
                         <th class="th-fourn">Addresse</th>
-                        <td><input type="text" name="adressefourn" class="inpt-fourn" placeholder="Addresse..."></td>
+                        <td><input type="text" name="adressefourn" class="inpt-fourn" placeholder="Addresse..." value="<?php echo $data["addresse_fourn"]?>"></td>
                     </tr>
                     <tr>
                         <th class="th-fourn">Telephone</th>
-                        <td><input type="text" name="telephonefourn" class="inpt-fourn" placeholder="Telephone..."></td>
+                        <td><input type="text" name="telephonefourn" class="inpt-fourn" placeholder="Telephone..." value="<?php echo $data["telephone_fourn"]?>"></td>
                     </tr>
                     <tr>
                         <th></th>
@@ -76,46 +82,6 @@ include("database.php");
                 </form>
             </fieldset>
         </div>
-<?php
-$select=$bdd->query("SELECT * FROM fournisseur ORDER BY id_fourn ASC LIMIT 5");
-if(isset($_GET["supp"])){
-    $idtodelete=$_GET["supp"];
-    $delete=$bdd->EXEC("DELETE FROM fournisseur WHERE id_fourn=$idtodelete");
-}
-?>
-        <div class="recup-fourn">
-            <h3 class="stit-fourn">Liste des Fournisseurs</h3>
-            <fieldset class="fieldset6">
-                    <table>
-                    <thead class="thead-fourn">
-                       <tr>
-                           <th class="th2-fourn">Nom</th>
-                           <th class="th2-fourn">Prenom</th>
-                           <th class="th2-fourn">Addresse</th>
-                           <th class="th2-fourn">Telephone</th>
-                           <th class="th2-fourn"colspan="2">Actions</th>
-                       </tr>
-                   </thead>
-                   <tbody class="tbody-fourn">
-                   <?php
-                   while($dataselect=$select->fetch()){
-                   ?>
-                       <tr>
-                           <td class="td-fourn"><?php echo $dataselect["nom_fourn"]?></td>
-                           <td class="td-fourn"><?php echo $dataselect["prenom_fourn"]?></td>
-                           <td class="td-fourn"><?php echo $dataselect["addresse_fourn"]?></td>
-                           <td class="td-fourn"><?php echo $dataselect["telephone_fourn"]?></td>
-                           <td class="td-fourn"><a href="fournisseur.php?supp=<?php echo $dataselect["id_fourn"]?>">Supprimer</a></td>
-                           <td class="td-fourn"><a href="modifierfour.php?mod<?php echo $dataselect["id_fourn"]?>">Modifier</a></td>
-                           
-                       </tr>
-                       <?php
-                   }
-                       ?>
-                   </tbody>
-                    </table>
-            </fieldset>
-        </div>
     </section>
     </div>
 </body>
@@ -123,10 +89,9 @@ if(isset($_GET["supp"])){
 <?php
 if(isset($_POST["submit"])){
     $name=$_POST["nomfourn"];
-    $prenom=$_POST["prenomfourn"];
-    $addresse=$_POST["adressefourn"];
+    $surname=$_POST["prenomfourn"];
+    $adresse=$_POST["adressefourn"];
     $phone=$_POST["telephonefourn"];
-    $insert=$bdd->prepare("INSERT INTO fournisseur(nom_fourn,prenom_fourn,addresse_fourn,telephone_fourn)VALUES(?,?,?,?)");
-    $insert->execute(array($name,$prenom,$addresse,$phone));
+    $update=$bdd->EXEC("UPDATE fournisseur SET nom_fourn='$name',prenom_fourn='$surname',addresse_fourn='$adresse',telephone_fourn='$phone' WHERE id_fourn=".$_GET["mod"]."");
 }
 ?>
