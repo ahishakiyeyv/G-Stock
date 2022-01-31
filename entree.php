@@ -169,8 +169,8 @@ include("database.php");
                            <td class="td2"><?php echo $data["Quantite"]?></td>
                            <td class="td2"><?php echo $data["Prix_Achat"]?></td>
                            <td class="td2"><?php echo $data["fournisseur"]?></td>
-                           <td class="td2"><a href="entree.php?sup=<?php echo $data["id_stock"]?>">Supprimer</a> </td>
-                           <td class="td2"><a href="modifierentree.php?mod?<?php echo $data["id_stock"]?>"></a></td>
+                           <td class="td2"><a href="entree.php?supp=<?php echo $data["id_stock"]?>">Supprimer</a> </td>
+                           <td class="td2"><a href="modifierentree.php?mod=<?php echo $data["id_stock"]?>">Modifier</a></td>
                           
                        </tr>
                        <?php

@@ -11,7 +11,7 @@ include("database.php");
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Tableau de Bord</title>
+    <title>Modifier Entree</title>
 </head>
 <body>
 <header>
@@ -49,7 +49,7 @@ include("database.php");
         <?php
             if(isset($_GET["mod"])){
                 $id_to_update=$_GET["mod"];
-                $select=$bdd->query("SELECT * FROM entreestock WHERE id_stock=$id_to_update");
+                $select=$bdd->query("SELECT * FROM entreestock WHERE id_stock=".$_GET["mod"]);
                 $data=$select->fetch();
             }
         ?>
