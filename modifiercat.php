@@ -1,6 +1,7 @@
 <?php
 include("database.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +11,7 @@ include("database.php");
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Categorie</title>
+    <title>Tableau de Bord</title>
 </head>
 <body>
 <header>
@@ -44,17 +45,21 @@ include("database.php");
                 <li class="li"><a class="link" href="statistique.php"><i class="fas fa-chart-line"></i>     --    Statistique</a></li>
         </div>
     </nav>
+    <?php 
+        $id_to_update=$_GET["mod"];
+        $select=$bdd->query("SELECT * FROM categorie WHERE id_cat=$id_to_update");
+        $dataselect=$select->fetch();
+    ?>
     <section id="section">
-        <h2 class="title-cat">Categorie</h2>
-        <div class="categ">
-            <h3 class="s-titcat">Ajouter une Categorie</h3>
+    <div class="categ">
+            <h3 class="s-titcat">Modifier une Categorie</h3>
             <fieldset class="fieldset7">
                 <form action="" method="post">
                 <table>
                     <tr>
                      <th class="th-cat">Nouvelle Categorie</th>
                    
-                        <th><input type="text" name="categorie" class="inpt-cat" placeholder="Nouvelle categorie..."></th>
+                        <th><input type="text" name="categorie" class="inpt-cat" placeholder="Nouvelle categorie..." value="<?php echo $dataselect["nom_cat"]?>"></th>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Ajouter" id="sub-cat" name="submit"></td>
@@ -64,47 +69,13 @@ include("database.php");
                 </form>
             </fieldset>
         </div>
-        <?php
-        $select=$bdd->query("SELECT * FROM categorie ORDER BY id_cat ASC LIMIT 5");
-        if(isset($_GET["supp"])){
-            $id_to_delete=$_GET["supp"];
-            $delete=$bdd->EXEC("DELETE FROM categorie WHERE id_cat=$id_to_delete");
-        }
-        ?>
-        <div class="recup-cat">
-            <h3 class="s-titcat2">Liste des categories</h3>
-            <fieldset class="fieldset8">
-            <table>
-                    <thead class="thead-cat">
-                       <tr>
-                           <th class="th2-cat">Nom Categorie</th>
-                           <th class="th2-cat"colspan="2">Actions</th>
-                       </tr>
-                   </thead>
-                   <tbody class="tbody-cat">
-                   <?php
-                   while($dataselect=$select->fetch()){
-                   ?>
-                       <tr>
-                           <td class="td-cat"><?php echo $dataselect["nom_cat"];?></td>
-                           <td class="td-cat"><a href="categorie.php?supp?=<?php echo $dataselect["id_cat"]?>">Supprimer</a></td>
-                           <td class="td-cat"><a href="modifiercat.php?mod=<?php echo $dataselect["id_cat"]?>">Modifier</a></td>
-                       </tr>
-                       <?php
-                   }
-                       ?>
-                   </tbody>
-                    </table>
-            </fieldset>
-        </div>
     </section>
     </div>
 </body>
 </html>
 <?php
 if(isset($_POST["submit"])){
-    $categorie=$_POST["categorie"];
-    $insert=$bdd->prepare("INSERT INTO categorie(nom_cat)VALUES(?)");
-    $insert->execute(array($categorie));
+    $nom=$_POST["categorie"];
+    $update=$bdd->EXEC("UPDATE categorie SET nom_cat='$nom' WHERE id_cat=".$_GET["mod"]."");
 }
 ?>
