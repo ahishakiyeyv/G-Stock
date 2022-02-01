@@ -50,7 +50,7 @@ include("database.php");
             if(isset($_GET["mod"])){
                 $id_to_update=$_GET["mod"];
                 $select=$bdd->query("SELECT * FROM entreestock WHERE id_stock=".$_GET["mod"]);
-                $data=$select->fetch();
+                $dataselect=$select->fetch();
             }
         ?>
     <div class="tabl1">
@@ -81,7 +81,7 @@ include("database.php");
                 </tr>
                 <tr>
                      <th class="th1">Designation:</th>
-                     <td><input type="text" name="designation" class="inpt1" placeholder="designation..." value="<?php echo $data["Designation"]?>"></td>
+                     <td><input type="text" name="designation" class="inpt1" placeholder="designation..." value="<?php echo $dataselect["Designation"]?>"></td>
                 </tr>
                 <tr>
                      <th class="th1">Categorie:</th>
@@ -101,15 +101,15 @@ include("database.php");
                 </tr>
                 <tr>
                     <th class="th1">Date d'Entrée:</th>
-                    <td><input type="date" name="dateEn" class="inpt1" value="<?php echo $data["date_Entre"]?>"></td>
+                    <td><input type="date" name="dateEn" class="inpt1" value="<?php echo $dataselect["date_Entre"]?>"></td>
                 </tr>
                 <tr>
                     <th class="th1">Quantité:</th>
-                    <td><input type="number" name="quantite" class="inpt1" placeholder="quantite..." value="<?php echo $data["Quantite"]?>"></td>
+                    <td><input type="number" name="quantite" class="inpt1" placeholder="quantite..." value="<?php echo $dataselect["Quantite"]?>"></td>
                 </tr>
                 <tr>
                     <th class="th1">Prix d'achat:</th>
-                    <td><input type="text" name="prixA" class="inpt1" placeholder="prix d'achat..." value="<?php echo $data["Prix_Achat"]?>"></td>
+                    <td><input type="text" name="prixA" class="inpt1" placeholder="prix d'achat..." value="<?php echo $dataselect["Prix_Achat"]?>"></td>
                 </tr>
                 <tr>
                     <th class="th1">Fournisseur:</th>
@@ -151,6 +151,7 @@ if(isset($_POST["submit"])){
     $quantite=$_POST["quantite"];
     $prix=$_POST["prixA"];
     $fournisseur=$_POST["fournis"];
-    $update=$bdd->EXEC("UPDATE entreestock SET CodePro='$code', Designation='$designation', Categorie='$categorie' , date_Entre='$date' , Quantite='$quantite' , Prix_Achat='$prix' , fournisseur='$fournisseur' WHERE id_stock=".$_GET["mods"]."");
+    $update=$bdd->EXEC("UPDATE entreestock SET CodePro='$code', Designation='$designation', Categorie='$categorie' , date_Entre='$date' , Quantite='$quantite' , Prix_Achat='$prix' , fournisseur='$fournisseur' WHERE id_stock=".$_GET["mod"]."");
+    header("location:entree.php");
 }
 ?>

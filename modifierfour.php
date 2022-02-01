@@ -48,30 +48,30 @@ include("database.php");
     <section id="section">
         <?php
         if(isset($_GET["mod"])){
-            $id=$bdd->query("SELECT * FROM fournisseur WHERE id_fourn=".$_GET["mod"]."");
-            $data=$id->fetch();
+            $select=$bdd->query("SELECT * FROM fournisseur WHERE id_fourn=".$_GET["mod"]."");
+            $dataupdate=$select->fetch();
         }
         ?>
     <div class="fourniss">
-            <h3 class="s-titFourn">Ajouter un Fournisseur</h3>
+            <h3 class="s-titFourn">Modifier un Fournisseur</h3>
             <fieldset class="fieldset5">
                 <form action="" method="post">
                 <table>
                     <tr>
                         <th class="th-fourn">Nom</th>
-                        <td><input type="text" name="nomfourn" class="inpt-fourn" placeholder="Nom..." value="<?php echo $data["nom_fourn"]?>"></td>
+                        <td><input type="text" name="nomfourn" class="inpt-fourn" placeholder="Nom..." value="<?php echo $dataupdate["nom_fourn"]?>"></td>
                     </tr>
                     <tr>
                         <th class="th-fourn">Prenom</th>
-                        <td><input type="text" name="prenomfourn" class="inpt-fourn" placeholder="Prenom..." value="<?php echo $data["prenom_fourn"]?>"></td>
+                        <td><input type="text" name="prenomfourn" class="inpt-fourn" placeholder="Prenom..." value="<?php echo $dataupdate["prenom_fourn"]?>"></td>
                     </tr>
                     <tr>
                         <th class="th-fourn">Addresse</th>
-                        <td><input type="text" name="adressefourn" class="inpt-fourn" placeholder="Addresse..." value="<?php echo $data["addresse_fourn"]?>"></td>
+                        <td><input type="text" name="adressefourn" class="inpt-fourn" placeholder="Addresse..." value="<?php echo $dataupdate["addresse_fourn"]?>"></td>
                     </tr>
                     <tr>
                         <th class="th-fourn">Telephone</th>
-                        <td><input type="text" name="telephonefourn" class="inpt-fourn" placeholder="Telephone..." value="<?php echo $data["telephone_fourn"]?>"></td>
+                        <td><input type="text" name="telephonefourn" class="inpt-fourn" placeholder="Telephone..." value="<?php echo $dataupdate["telephone_fourn"]?>"></td>
                     </tr>
                     <tr>
                         <th></th>
@@ -93,5 +93,6 @@ if(isset($_POST["submit"])){
     $adresse=$_POST["adressefourn"];
     $phone=$_POST["telephonefourn"];
     $update=$bdd->EXEC("UPDATE fournisseur SET nom_fourn='$name',prenom_fourn='$surname',addresse_fourn='$adresse',telephone_fourn='$phone' WHERE id_fourn=".$_GET["mod"]."");
+    header("location:fournisseur.php");
 }
 ?>

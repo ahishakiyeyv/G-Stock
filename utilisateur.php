@@ -117,7 +117,7 @@ include("database.php");
                            <td class="td-user"><?php echo $dataselection["phone_util"]?></td>
                            <td class="td-user"><?php echo $dataselection["password_util"]?></td>
                            <td class="td-user"><a href="utilisateur.php?supp=<?php echo $dataselection["id_util"]?>">Supprimer</a></td>
-                           <td class="td-user">Modifier</td>
+                           <td class="td-user"><a href="modifierutil.php?mod=<?php echo $dataselection["id_util"]?>">Modifier</a></td>
                            <td class="td-user">Activer</td>
                        </tr>
                        <?php

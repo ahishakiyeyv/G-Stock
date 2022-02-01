@@ -106,7 +106,7 @@ if(isset($_GET["supp"])){
                            <td class="td-fourn"><?php echo $dataselect["addresse_fourn"]?></td>
                            <td class="td-fourn"><?php echo $dataselect["telephone_fourn"]?></td>
                            <td class="td-fourn"><a href="fournisseur.php?supp=<?php echo $dataselect["id_fourn"]?>">Supprimer</a></td>
-                           <td class="td-fourn"><a href="modifierfour.php?mod<?php echo $dataselect["id_fourn"]?>">Modifier</a></td>
+                           <td class="td-fourn"><a href="modifierfour.php?mod=<?php echo $dataselect["id_fourn"]?>">Modifier</a></td>
                            
                        </tr>
                        <?php

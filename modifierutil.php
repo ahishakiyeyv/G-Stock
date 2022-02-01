@@ -11,7 +11,7 @@ include("database.php");
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Tableau de Bord</title>
+    <title>Modifier Utilisateur</title>
 </head>
 <body>
 <header>
@@ -45,25 +45,45 @@ include("database.php");
                 <li class="li"><a class="link" href="statistique.php"><i class="fas fa-chart-line"></i>     --    Statistique</a></li>
         </div>
     </nav>
-    <?php 
-        $id_to_update=$_GET["mod"];
-        $select=$bdd->query("SELECT * FROM categorie WHERE id_cat=$id_to_update");
-        $dataselect=$select->fetch();
+    <?php
+    if(isset($_GET["mod"])){
+        $select=$bdd->query("SELECT * FROM utilisateur WHERE id_util=".$_GET["mod"]."");
+        $datasel=$select->fetch();
+    }
     ?>
     <section id="section">
-    <div class="categ">
-            <h3 class="s-titcat">Modifier une Categorie</h3>
-            <fieldset class="fieldset7">
+    <div class="users">
+            <h3 class="stit-user">Modifier un Utilisateur</h3>
+            <fieldset class="fieldset9">
                 <form action="" method="post">
                 <table>
-                    <tr>
-                     <th class="th-cat">Nouvelle Categorie</th>
-                   
-                        <th><input type="text" name="categorie" class="inpt-cat" placeholder="Nouvelle categorie..." value="<?php echo $dataselect["nom_cat"]?>"></th>
+                <tr>
+                     <th class="th-user">Nom</th>
+                        <th><input type="text" name="nom" class="inpt-user"placeholder="Nom..." value="<?php echo $datasel["nom_util"]?>" ></th>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Ajouter" id="sub-cat" name="submit"></td>
-                   <td> <input type="reset" value="Annuler" id="res-cat"></td>
+                     <th class="th-user">Prenom</th>
+                        <th><input type="text" name="prenom" class="inpt-user"placeholder="Prenom..." value="<?php echo $datasel["prenom_util"]?>"></th>
+                    </tr>
+                    <tr>
+                     <th class="th-user">Email</th>
+                        <th><input type="text" name="email" class="inpt-user"placeholder="Email..." value="<?php echo $datasel["email_util"]?>" required></th>
+                    </tr>
+                    <tr>
+                     <th class="th-user">Adresse</th>
+                        <th><input type="text" name="adresse" class="inpt-user"placeholder="Adresse..." value="<?php echo $datasel["adresse_util"]?>"></th>
+                    </tr>
+                    <tr>
+                     <th class="th-user">Telephone</th>
+                        <th><input type="text" name="phone" class="inpt-user"placeholder="Telephone..." value="<?php echo $datasel["phone_util"]?>"></th>
+                    </tr>
+                    <tr>
+                     <th class="th-user">Mot de Passe</th>
+                        <td><input type="password" name="motdepasse" class="inpt-user" placeholder="Mot de Passe..." value="<?php echo $datasel["password_util"]?>" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Ajouter" id="sub-user" name="submit"></td>
+                   <td> <input type="reset" value="Annuler" id="res-user"></td>
                     </tr>
                 </table>
                 </form>
@@ -75,8 +95,13 @@ include("database.php");
 </html>
 <?php
 if(isset($_POST["submit"])){
-    $nom=$_POST["categorie"];
-    $update=$bdd->EXEC("UPDATE categorie SET nom_cat='$nom' WHERE id_cat=".$_GET["mod"]."");
-    header("location:categorie.php");
+    $name=$_POST["nom"];
+    $surname=$_POST["prenom"];
+    $mail=$_POST["email"];
+    $adresse=$_POST["adresse"];
+    $phone=$_POST["phone"];
+    $password=$_POST["motdepasse"];
+    $update=$bdd->EXEC("UPDATE utilisateur SET nom_util='$name',prenom_util='$surname',email_util='$mail',adresse_util='$adresse',phone_util='$phone',password_util='$password' WHERE id_util=".$_GET["mod"]."");
+    header("location:utilisateur.php");
 }
 ?>
