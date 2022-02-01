@@ -95,8 +95,8 @@ include("database.php");
                        <tr>
                            <td class="td-pro"><?php echo $dataselect["CodePro"];?></td>
                            <td class="td-pro"><?php echo $dataselect["nomPro"];?></td>
-                           <td class="td-pro"><a href="produit.php?supp=<?php echo $dataselect["id_pro"]?>">Supprimer</a></td>
-                           <td class="td-pro"><a href="modifierproduit.php?mod=<?php echo $dataselect["id_pro"]?>">Modifer</a></td>
+                           <td class="td-pro"><a href="produit.php?supp=<?php echo $dataselect["id_pro"]?>"><i class="fas fa-trash-alt"></i></a></td>
+                           <td class="td-pro"><a href="modifierproduit.php?mod=<?php echo $dataselect["id_pro"]?>"><i class="far fa-edit"></i></a></td>
                        </tr>
                        <?php
                    }
