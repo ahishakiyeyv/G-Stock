@@ -87,8 +87,8 @@ include("database.php");
                    ?>
                        <tr>
                            <td class="td-cat"><?php echo $dataselect["nom_cat"];?></td>
-                           <td class="td-cat"><a href="categorie.php?supp?=<?php echo $dataselect["id_cat"]?>"><i class="fas fa-trash-alt"></i></a></td>
-                           <td class="td-cat"><a href="modifiercat.php?mod=<?php echo $dataselect["id_cat"]?>"><i class="far fa-edit"></i></a></td>
+                           <td class="td-cat"><a href="categorie.php?supp?=<?php echo $dataselect["id_cat"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
+                           <td class="td-cat"><a href="modifiercat.php?mod=<?php echo $dataselect["id_cat"]?>"><i class="far fa-edit"></i>Modifier</a></td>
                        </tr>
                        <?php
                    }
