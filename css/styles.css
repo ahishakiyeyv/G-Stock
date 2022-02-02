@@ -3,6 +3,14 @@ body{
     padding:0;
     box-sizing: border-box;
 }
+.btn-sup{
+    text-decoration: none;
+    color:red;
+}
+.btn-upd{
+    text-decoration: none;
+    color:green;
+}
 /*==============================Header & Menu========================*/
 header{
     background:black;
@@ -459,6 +467,7 @@ table .th2-fourn .td-fourn{
     width:620px;
     margin-left: 200px;
 }
+
 /*=============================================================================*/
 /*=======================categorie========================*/
 .title-cat{

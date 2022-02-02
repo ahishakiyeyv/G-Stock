@@ -9,7 +9,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Entrée Stock</title>
 </head>
 <body>
@@ -169,8 +169,8 @@ include("database.php");
                            <td class="td2"><?php echo $data["Quantite"]?></td>
                            <td class="td2"><?php echo $data["Prix_Achat"]?></td>
                            <td class="td2"><?php echo $data["fournisseur"]?></td>
-                           <td class="td2"><a href="entree.php?supp=<?php echo $data["id_stock"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a> </td>
-                           <td class="td2"><a href="modifierentree.php?mod=<?php echo $data["id_stock"]?>"><i class="far fa-edit"></i>Modifier</a></td>
+                           <td class="td2"><a class="btn-sup" href="entree.php?supp=<?php echo $data["id_stock"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a> </td>
+                           <td class="td2"><a class="btn-upd" href="modifierentree.php?mod=<?php echo $data["id_stock"]?>"><i class="far fa-edit"></i>Modifier</a></td>
                           
                        </tr>
                        <?php

@@ -9,7 +9,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Fournisseur</title>
 </head>
 <body>
@@ -105,8 +105,8 @@ if(isset($_GET["supp"])){
                            <td class="td-fourn"><?php echo $dataselect["prenom_fourn"]?></td>
                            <td class="td-fourn"><?php echo $dataselect["addresse_fourn"]?></td>
                            <td class="td-fourn"><?php echo $dataselect["telephone_fourn"]?></td>
-                           <td class="td-fourn"><a href="fournisseur.php?supp=<?php echo $dataselect["id_fourn"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
-                           <td class="td-fourn"><a href="modifierfour.php?mod=<?php echo $dataselect["id_fourn"]?>"><i class="far fa-edit"></i>Modifier</a></td>
+                           <td class="td-fourn"><a class="btn-sup" href="fournisseur.php?supp=<?php echo $dataselect["id_fourn"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
+                           <td class="td-fourn"><a class="btn-upd" href="modifierfour.php?mod=<?php echo $dataselect["id_fourn"]?>"><i class="far fa-edit"></i>Modifier</a></td>
                            
                        </tr>
                        <?php

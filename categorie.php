@@ -9,7 +9,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Categorie</title>
 </head>
 <body>
@@ -87,8 +87,8 @@ include("database.php");
                    ?>
                        <tr>
                            <td class="td-cat"><?php echo $dataselect["nom_cat"];?></td>
-                           <td class="td-cat"><a href="categorie.php?supp?=<?php echo $dataselect["id_cat"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
-                           <td class="td-cat"><a href="modifiercat.php?mod=<?php echo $dataselect["id_cat"]?>"><i class="far fa-edit"></i>Modifier</a></td>
+                           <td class="td-cat"><a class="btn-sup" href="categorie.php?supp?=<?php echo $dataselect["id_cat"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
+                           <td class="td-cat"><a class="btn-upd" href="modifiercat.php?mod=<?php echo $dataselect["id_cat"]?>"><i class="far fa-edit"></i>Modifier</a></td>
                        </tr>
                        <?php
                    }

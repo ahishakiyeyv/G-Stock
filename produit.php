@@ -10,7 +10,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Produit</title>
 </head>
 <body>
@@ -95,8 +95,8 @@ include("database.php");
                        <tr>
                            <td class="td-pro"><?php echo $dataselect["CodePro"];?></td>
                            <td class="td-pro"><?php echo $dataselect["nomPro"];?></td>
-                           <td class="td-pro"><a href="produit.php?supp=<?php echo $dataselect["id_pro"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
-                           <td class="td-pro"><a href="modifierproduit.php?mod=<?php echo $dataselect["id_pro"]?>"><i class="far fa-edit"></i>Modifier</a></td>
+                           <td class="td-pro"><a class="btn-sup" href="produit.php?supp=<?php echo $dataselect["id_pro"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
+                           <td class="td-pro"><a class="btn-upd" href="modifierproduit.php?mod=<?php echo $dataselect["id_pro"]?>"><i class="far fa-edit"></i>Modifier</a></td>
                        </tr>
                        <?php
                    }
