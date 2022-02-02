@@ -7,9 +7,17 @@ body{
     text-decoration: none;
     color:red;
 }
+.btn-sup:hover{
+    color:gray;
+    transition: 0.75s;
+}
 .btn-upd{
     text-decoration: none;
     color:green;
+}
+.btn-upd:hover{
+    color:gray;
+    transition: 0.75s;
 }
 /*==============================Header & Menu========================*/
 header{
