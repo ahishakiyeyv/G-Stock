@@ -10,7 +10,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Tableau de Bord</title>
 </head>
 <body>
@@ -67,7 +67,7 @@ include("database.php");
                         </tr>
                         <tr>
                             <th></th>
-                            <td><input type="submit" value="Ajouter" name="submit" id="sub_pro">
+                            <td><input type="submit" value="Modifier" name="submit" id="sub_pro">
                             <input type="reset" value="Annuler" id="res_pro">
                         </td>
                         </tr>

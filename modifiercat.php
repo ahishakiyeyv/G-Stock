@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include("database.php");
 ?>
 
@@ -10,7 +11,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Tableau de Bord</title>
 </head>
 <body>
@@ -62,7 +63,7 @@ include("database.php");
                         <th><input type="text" name="categorie" class="inpt-cat" placeholder="Nouvelle categorie..." value="<?php echo $dataselect["nom_cat"]?>"></th>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Ajouter" id="sub-cat" name="submit"></td>
+                        <td><input type="submit" value="Modifier" id="sub-cat" name="submit"></td>
                    <td> <input type="reset" value="Annuler" id="res-cat"></td>
                     </tr>
                 </table>
@@ -78,5 +79,6 @@ if(isset($_POST["submit"])){
     $nom=$_POST["categorie"];
     $update=$bdd->EXEC("UPDATE categorie SET nom_cat='$nom' WHERE id_cat=".$_GET["mod"]."");
     header("location:categorie.php");
+    ob_end_flush(); 
 }
 ?>

@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include("database.php");
 ?>
 
@@ -10,7 +11,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Modifier Entree</title>
 </head>
 <body>
@@ -131,7 +132,7 @@ include("database.php");
                 </tr>
                 <tr>
                     <th></th>
-                    <td><input type="submit" value="Ajouter" id="sub1" name="submit">
+                    <td><input type="submit" value="Modifier" id="sub1" name="submit">
                     <input type="reset" value="Annuler" id="res1"></td>
                 </tr>
             </table>
@@ -153,5 +154,6 @@ if(isset($_POST["submit"])){
     $fournisseur=$_POST["fournis"];
     $update=$bdd->EXEC("UPDATE entreestock SET CodePro='$code', Designation='$designation', Categorie='$categorie' , date_Entre='$date' , Quantite='$quantite' , Prix_Achat='$prix' , fournisseur='$fournisseur' WHERE id_stock=".$_GET["mod"]."");
     header("location:entree.php");
+    ob_end_flush();
 }
 ?>

@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include("database.php");
 ?>
 
@@ -10,7 +11,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Modifier Fournisseur</title>
 </head>
 <body>
@@ -75,7 +76,7 @@ include("database.php");
                     </tr>
                     <tr>
                         <th></th>
-                        <td><input type="submit" value="Enregistrer" id="sub-fourn" name="submit">
+                        <td><input type="submit" value="Modifier" id="sub-fourn" name="submit">
                         <input type="reset" value="Annuler" id="res-fourn"></td>
                     </tr>
                 </table>
@@ -94,5 +95,6 @@ if(isset($_POST["submit"])){
     $phone=$_POST["telephonefourn"];
     $update=$bdd->EXEC("UPDATE fournisseur SET nom_fourn='$name',prenom_fourn='$surname',addresse_fourn='$adresse',telephone_fourn='$phone' WHERE id_fourn=".$_GET["mod"]."");
     header("location:fournisseur.php");
+    ob_end_flush();
 }
 ?>

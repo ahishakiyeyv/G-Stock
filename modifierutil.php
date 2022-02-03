@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include("database.php");
 ?>
 
@@ -10,7 +11,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Modifier Utilisateur</title>
 </head>
 <body>
@@ -82,7 +83,7 @@ include("database.php");
                         <td><input type="password" name="motdepasse" class="inpt-user" placeholder="Mot de Passe..." value="<?php echo $datasel["password_util"]?>" required></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Ajouter" id="sub-user" name="submit"></td>
+                        <td><input type="submit" value="Modifier" id="sub-user" name="submit"></td>
                    <td> <input type="reset" value="Annuler" id="res-user"></td>
                     </tr>
                 </table>
@@ -103,5 +104,6 @@ if(isset($_POST["submit"])){
     $password=$_POST["motdepasse"];
     $update=$bdd->EXEC("UPDATE utilisateur SET nom_util='$name',prenom_util='$surname',email_util='$mail',adresse_util='$adresse',phone_util='$phone',password_util='$password' WHERE id_util=".$_GET["mod"]."");
     header("location:utilisateur.php");
+    ob_end_flush();
 }
 ?>

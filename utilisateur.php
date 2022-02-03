@@ -9,7 +9,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Utilisateur</title>
 </head>
 <body>
@@ -102,7 +102,7 @@ include("database.php");
                            <th class="th2-user">Adresse</th>
                            <th class="th2-user">Telephone</th>
                            <th class="th2-user">Mot de Passe</th>
-                           <th class="th2-user"colspan="3">Actions</th>
+                           <th class="th2-user"colspan="2">Actions</th>
                        </tr>
                    <tbody class="tbody-user">
                    </thead>
@@ -118,7 +118,7 @@ include("database.php");
                            <td class="td-user"><?php echo $dataselection["password_util"]?></td>
                            <td class="td-user"><a class="btn-sup" href="utilisateur.php?supp=<?php echo $dataselection["id_util"]?>"><i class="fas fa-user-minus">Suppriner</i></a></td>
                            <td class="td-user"><a class="btn-upd" href="modifierutil.php?mod=<?php echo $dataselection["id_util"]?>"><i class="fas fa-user-edit"></i>Modifier</a></td>
-                           <td class="td-user">Activer</td>
+                           <!-- <td class="td-user">Activer</td> -->
                        </tr>
                        <?php
                    }
