@@ -9,7 +9,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Stock</title>
 </head>
 <body>
@@ -51,7 +51,8 @@ include("database.php");
     $sortie=$bdd->query("SELECT qte_sortie FROM sortiestock");
     if(isset($_GET["supp"])){
         $id=$_GET["supp"];
-        $delete=$bdd->EXEC("DELETE FROM stock WHERE id_stock=$id");
+        $delete=$bdd->EXEC("DELETE FROM stock WHERE idstock=$id");
+        
     }
     ?>
     <section id="section">
@@ -67,7 +68,7 @@ include("database.php");
                            <th class="th-stock">Categorie</th>
                            <th class="th-stock">Quantite</th>
                            <th class="th-stock">Prix</th>
-                           <th class="th-stock" colspan="3">Actions</th>
+                           <th class="th-stock" colspan="2">Actions</th>
                        </tr>
                    </thead>
                    <tbody class="tbody-stock">
@@ -80,7 +81,7 @@ include("database.php");
                            <td class="td-stock"><?php echo $datastock["Categorie"]?></td>
                            <td class="td-stock"><?php echo $datastock["Quantite"]-$datastock["qte_sortie"]?></td>
                            <td class="td-stock"><?php echo $datastock["Prix_Achat"]?></td>
-                           <td class="td-stock"><a href="stock.php?supp=<?php echo $datastock["id_stock"]?>">Supprimer</a></td>
+                           <!-- <td class="td-stock"><a href="stock.php?supp=<?php echo $datastock["idstock"]?>">Supprimer</a></td> -->
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>
                        </tr>
