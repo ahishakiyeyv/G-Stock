@@ -53,11 +53,11 @@ include("database.php");
                 <form action="" method="post">
                     <table>
                         <tr>
-                            <th class="th-pro">Code Produit</th>
+                            <th class="th-pro">Code Produit:  </th>
                             <td><input type="text" name="code" class="inpt-pro" placeholder="Code Produit..." required></td>
                         </tr>
                         <tr>
-                            <th class="th-pro">Nom Produit</th>
+                            <th class="th-pro">Nom Produit:   </th>
                             <td><input type="text" name="nompro" class="inpt-pro" placeholder="Nom..." required></td>
                         </tr>
                         <tr>

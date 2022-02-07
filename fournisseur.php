@@ -8,7 +8,6 @@ include("database.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Fournisseur</title>
@@ -53,19 +52,19 @@ include("database.php");
                 <form action="" method="post">
                 <table>
                     <tr>
-                        <th class="th-fourn">Nom</th>
+                        <th class="th-fourn">Nom:  </th>
                         <td><input type="text" name="nomfourn" class="inpt-fourn" placeholder="Nom..."></td>
                     </tr>
                     <tr>
-                        <th class="th-fourn">Prenom</th>
+                        <th class="th-fourn">Prenom:   </th>
                         <td><input type="text" name="prenomfourn" class="inpt-fourn" placeholder="Prenom..."></td>
                     </tr>
                     <tr>
-                        <th class="th-fourn">Addresse</th>
+                        <th class="th-fourn">Addresse:   </th>
                         <td><input type="text" name="adressefourn" class="inpt-fourn" placeholder="Addresse..."></td>
                     </tr>
                     <tr>
-                        <th class="th-fourn">Telephone</th>
+                        <th class="th-fourn">Telephone:   </th>
                         <td><input type="text" name="telephonefourn" class="inpt-fourn" placeholder="Telephone..."></td>
                     </tr>
                     <tr>

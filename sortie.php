@@ -52,7 +52,7 @@ include("database.php");
                 <form action="" method="post">
                 <table>
                     <tr>
-                        <th class="th-sort">Code Produit</th>
+                        <th class="th-sort">Code Produit:</th>
                         <td>
                             <select name="code" class="inpt-sort">
                             <option value="">---code produit---</option>
@@ -70,11 +70,11 @@ include("database.php");
                         </td>
                     </tr>
                     <tr>
-                        <th class="th-sort">Designation</th>
+                        <th class="th-sort">Designation:</th>
                         <td><input type="text" name="designa" class="inpt-sort" placeholder="designation..."></td>
                     </tr>
                     <tr>
-                        <th class="th-sort">Categorie</th>
+                        <th class="th-sort">Categorie:</th>
                         <td>
                             <select name="categorie" class="inpt-sort">
                             <option value="">---categorie---</option>
@@ -91,15 +91,15 @@ include("database.php");
                         </td>
                     </tr>
                     <tr>
-                        <th class="th-sort">Quantite sortie</th>
+                        <th class="th-sort">Quantite sortie:</th>
                         <td><input type="number" name="qtesortie" class="inpt-sort" placeholder="quantite sortie..."></td>
                     </tr>
                     <tr>
-                        <th class="th-sort">Prix</th>
+                        <th class="th-sort">Prix:</th>
                         <td><input type="text" name="prixachat" class="inpt-sort" placeholder="prix..."></td>
                     </tr>
                     <tr>
-                        <th class="th-sort">Date sortie</th>
+                        <th class="th-sort">Date sortie:</th>
                         <td><input type="date" name="datesortie" class="inpt-sort"></td>
                     </tr>
                     <tr>
