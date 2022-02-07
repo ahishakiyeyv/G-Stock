@@ -52,7 +52,7 @@ include("database.php");
                 <form action="" method="post">
                 <table>
                     <tr>
-                     <th class="th-cat">Nouvelle Categorie</th>
+                     <th class="th-cat">Nouvelle Categorie:   </th>
                    
                         <th><input type="text" name="categorie" class="inpt-cat" placeholder="Nouvelle categorie..."></th>
                     </tr>

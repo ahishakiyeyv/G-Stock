@@ -52,27 +52,27 @@ include("database.php");
                 <form action="" method="post">
                 <table>
                 <tr>
-                     <th class="th-user">Nom</th>
+                     <th class="th-user">Nom:</th>
                         <th><input type="text" name="nom" class="inpt-user"placeholder="Nom..." ></th>
                     </tr>
                     <tr>
-                     <th class="th-user">Prenom</th>
+                     <th class="th-user">Prenom:</th>
                         <th><input type="text" name="prenom" class="inpt-user"placeholder="Prenom..."></th>
                     </tr>
                     <tr>
-                     <th class="th-user">Email</th>
+                     <th class="th-user">Email:</th>
                         <th><input type="text" name="email" class="inpt-user"placeholder="Email..." required></th>
                     </tr>
                     <tr>
-                     <th class="th-user">Adresse</th>
+                     <th class="th-user">Adresse:</th>
                         <th><input type="text" name="adresse" class="inpt-user"placeholder="Adresse..."></th>
                     </tr>
                     <tr>
-                     <th class="th-user">Telephone</th>
+                     <th class="th-user">Telephone:</th>
                         <th><input type="text" name="phone" class="inpt-user"placeholder="Telephone..."></th>
                     </tr>
                     <tr>
-                     <th class="th-user">Mot de Passe</th>
+                     <th class="th-user">Mot de Passe:</th>
                         <td><input type="password" name="motdepasse" class="inpt-user" placeholder="Mot de Passe..." required></td>
                     </tr>
                     <tr>

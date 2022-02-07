@@ -18,7 +18,7 @@ body{
 }
 .btn-upd{
     text-decoration: none;
-    color:green;
+    color:#42f587;
 }
 .btn-upd:hover{
     color:gray;
@@ -138,14 +138,15 @@ header{
     color:#ffffff;
 }
 .inpt1{
-    height:25px;
-    width:100%;
+    height:30px;
+    width:110%;
     border-radius: 3px;
     outline:none;
     background:#5c5757 ;
     color:ivory;
-    box-shadow: inset 5px 5px 4px #252323,
-    inset -5px -5px 4px #938b8b;
+    box-shadow: inset -5px 5px 3px #252323,
+            inset 5px -5px 3px #938b8b;
+
 }
 #sub1{
     font-size: 15px;
@@ -226,14 +227,15 @@ table .th2 .td2{
     color:#fff;
 }
 .inpt-sort{
-    height:25px;
-    width:100%;
+    height:30px;
+    width:110%;
     border-radius: 3px;
     outline:none;
     background:#5c5757 ;
     color:ivory;
-    box-shadow: inset 5px 5px 4px #252323,
-    inset -5px -5px 4px #938b8b;
+    box-shadow: inset -5px 5px 3px #252323,
+    inset 5px -5px 3px #938b8b;
+
 }
 #btn-sub{
     font-size: 15px;
@@ -330,14 +332,15 @@ table .th2-sort .td-sort{
     color:#ffffff;
 }
 .inpt-pro{
-    height:25px;
-    width:100%;
+    height:30px;
+    width:110%;
     border-radius: 3px;
     outline:none;
     background:#5c5757 ;
     color:ivory;
-    box-shadow: inset 5px 5px 4px #252323,
-    inset -5px -5px 4px #938b8b;
+    box-shadow: inset -5px 5px 3px #252323,
+            inset 5px -5px 3px #938b8b;
+
 }
 #sub_pro{
     font-size: 15px;
@@ -452,14 +455,15 @@ table .th-stock .td-stock{
     color:#ffffff;
 }
 .inpt-fourn{
-    height:25px;
-    width:100%;
+    height:30px;
+    width:110%;
     border-radius: 3px;
     outline:none;
     background:#5c5757 ;
     color:ivory;
-    box-shadow: inset 5px 5px 4px #252323,
-            inset -5px -5px 4px #938b8b;
+    box-shadow: inset -5px 5px 3px #252323,
+            inset 5px -5px 3px #938b8b;
+
 }
 #sub-fourn{
     font-size: 15px;
@@ -540,14 +544,15 @@ table .th2-fourn .td-fourn{
     color:#ffffff;
 }
 .inpt-cat{
-    height:25px;
-    width:100%;
-    border-radius: 3px;
+    height:30px;
+    width:110%;
+    border-radius: 5px;
     outline:none;
     background:#5c5757 ;
     color:ivory;
-    box-shadow: inset 5px 5px 4px #252323,
-            inset -5px -5px 4px #938b8b;
+    box-shadow: inset -5px 5px 3px #252323,
+            inset 5px -5px 3px #938b8b;
+
 }
 #sub-cat{
     font-size: 15px;
@@ -641,14 +646,14 @@ table .th2-cat .td-cat{
     color:#ffffff;
 }
 .inpt-user{
-    height:25px;
-    width:100%;
-    border-radius: 3px;
+    height:30px;
+    width:110%;
+    border-radius: 5px;
     outline:none;
     background:#5c5757;
     color:ivory;
-    box-shadow: inset 5px 5px 4px #252323,
-            inset -5px -5px 4px #938b8b;
+    box-shadow: inset -5px 5px 3px #252323,
+            inset 5px -5px 3px #938b8b;
 }
 #sub-user{
     font-size: 15px;
