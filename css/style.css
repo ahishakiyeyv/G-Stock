@@ -417,8 +417,8 @@ header{
     text-decoration: underline;
 }
 .fieldset4{
-    width:600px;
-    margin-left:200px;
+    width:1000px;
+    margin-left:20px;
     border:0;
 }
 table .th-stock .td-stock{
@@ -434,7 +434,15 @@ table .th-stock .td-stock{
     padding:15px;
 }
 .td-stock{
+    padding:15px;
     text-align: center;
+}
+.td-stocke{
+    padding:20px;
+    text-align: center;
+    color:black;
+    font-weight: 900;
+    letter-spacing: 3px;
 }
 /*==================================================================================*/
 /*===========================fournisseur======================*/

@@ -45,10 +45,11 @@ include("database.php");
         </div>
     </nav>
     <?php
-    $stock=$bdd->query("SELECT E.CodePro,E.Categorie,E.Quantite,E.Prix_Achat,P.*,S.* FROM produit P,entreestock E,sortiestock S WHERE E.CodePro=P.CodePro AND S.codepro=P.codepro");
-    $stockee=$bdd->query("SELECT qte_stock FROM stock");
-    $entree=$bdd->query("SELECT Quantite FROM entreestock");
-    $sortie=$bdd->query("SELECT qte_sortie FROM sortiestock");
+    $stock=$bdd->query("SELECT * FROM entreestock ORDER BY id_stock");
+    // $stock=$bdd->query("SELECT E.CodePro,E.Categorie,E.Quantite,E.Prix_Achat,P.*,S.* FROM produit P,entreestock E,sortiestock S WHERE E.CodePro=P.CodePro AND S.codepro=P.codepro");
+    // $stockee=$bdd->query("SELECT qte_stock FROM stock");
+    // $entree=$bdd->query("SELECT Quantite FROM entreestock");
+    // $sortie=$bdd->query("SELECT qte_sortie FROM sortiestock");
     if(isset($_GET["supp"])){
         $id=$_GET["supp"];
         $delete=$bdd->EXEC("DELETE FROM stock WHERE idstock=$id");
@@ -74,22 +75,36 @@ include("database.php");
                    </thead>
                    <tbody class="tbody-stock">
                        <?php
+                       (int)$total=0;
                        while($datastock=$stock->fetch()){
+                         (int)$prix=$datastock["Prix_Achat"];
+                       (int)$total += $datastock["Quantite"] * (int)$prix;
                        ?>
                        <tr>
                            <td class="td-stock"><?php echo $datastock["CodePro"]?></td>
-                           <td class="td-stock"><?php echo $datastock["nomPro"]?></td>
+                           <td class="td-stock"><?php echo $datastock["Designation"]?></td>
                            <td class="td-stock"><?php echo $datastock["Categorie"]?></td>
                            <td class="td-stock"><?php echo $datastock["Quantite"]?></td>
                            <td class="td-stock"><?php echo $datastock["Prix_Achat"]?></td>
-                           <td class="td-stock"><?php echo $datastock["Quantite"] * $datastock["Prix_Achat"]?></td>
+                           <td class="td-stock"><?php echo $datastock["Quantite"] * (int)$prix?></td>
                            <!-- <td class="td-stock"><a href="stock.php?supp=<?php echo $datastock["idstock"]?>">Supprimer</a></td> -->
-                           <td class="td-stock"></td>
-                           <td class="td-stock"></td>
+                           <td class="td-stock">Modifier</td>
+                           <td class="td-stock">Vendre</td>
                        </tr>
                        <?php
                        }
                        ?>
+                       <tr>
+                           <td class="td-stocke">Total:</td>
+                           <td class="td-stock"></td>
+                           <td class="td-stock"></td>
+                           <td class="td-stock"></td>
+                           <td class="td-stock"></td>
+                           <td class="td-stocke"><?php echo (int)$total?></td>
+                           <td class="td-stock"></td>
+                           <td class="td-stock"></td>
+                       </tr>
+                       
                    </tbody>
                 </table>
             </fieldset>
