@@ -106,7 +106,6 @@ header{
 #section{
     width:1000px;
     margin-right:50px;
-    border: 1px solid red;
 }
 /*==============================================================================*/
 /*=============================Entree=======================*/
@@ -171,10 +170,13 @@ header{
     color:#f54242;
 }
 /*==============================recuperation entree=========================*/
-table .th2 .td2{
-    border: 1px solid black;
+/* table{
+    
+} */
+.table01,.th2,.td2{
+    border-bottom: 2px solid black;
     border-collapse: collapse;
-}
+} 
 .thead{
     background:#42f587;
 }
@@ -188,6 +190,7 @@ table .th2 .td2{
     text-align:center;
 }
 .fieldset1{
+    border:0;
     width:980px;
     margin-left: 10px;
 }
@@ -215,6 +218,7 @@ table .th2 .td2{
     text-decoration: underline;
 }
 .fieldset2{
+    border:1px solid black;
     width:350px;
     border-radius: 20px;
     margin-left:80px;
@@ -268,8 +272,8 @@ table .th2 .td2{
     margin-top:50px;
     text-decoration: underline;
 }
-table .th2-sort .td-sort{
-    border: 1px solid black;
+.table02,.th2-sort,.td-sort{
+    border-bottom: 2px solid black;
     border-collapse: collapse;
 }
 .thead-sort{
@@ -282,10 +286,12 @@ table .th2-sort .td-sort{
 }
 .td-sort{
     padding:10px;
+    text-align :center;
 }
 .fieldset3{
+    border:0;
     width:900px;
-    margin-left: 10px;
+    margin-left: 100px;
 }
 .print{
     margin:25px;
@@ -320,11 +326,12 @@ table .th2-sort .td-sort{
     text-decoration: underline;
 }
 .fieldset002{
+    border:1px solid black;
     width:350px;
     border-radius: 20px;
     margin-left:80px;
-    box-shadow:  -6px -6px 5px #2e2c2c,
-             6px 6px 5px #8a8383;
+    box-shadow: -6px -6px 5px #2e2c2c,
+            6px 6px 5px #8a8383;
 }
 .th-pro{
     font-family: Arial, Helvetica, sans-serif;
@@ -373,8 +380,8 @@ table .th2-sort .td-sort{
     margin-top:100px;
     text-decoration: underline;
 }
-table .th2-pro .td-pro{
-    border: 1px solid black;
+.table03,.th2-pro,.td-pro{
+    border-bottom: 2px solid black;
     border-collapse: collapse;
 }
 .thead-pro{
@@ -387,8 +394,10 @@ table .th2-pro .td-pro{
 }
 .td-pro{
     padding:10px;
+    text-align: center;
 }
 .fieldset003{
+    border:0;
     width:450px;
     margin-left: 300px;
 }
@@ -410,7 +419,7 @@ table .th2-pro .td-pro{
 .fieldset4{
     width:600px;
     margin-left:200px;
-    
+    border:0;
 }
 table .th-stock .td-stock{
     border: 1px solid black;
@@ -443,6 +452,7 @@ table .th-stock .td-stock{
     text-decoration: underline;
 }
 .fieldset5{
+    border:1px solid black;
     width:350px;
     border-radius: 20px;
     margin-left:80px;
@@ -496,8 +506,8 @@ table .th-stock .td-stock{
     margin-top:50px;
     text-decoration: underline;
 }
-table .th2-fourn .td-fourn{
-    border: 1px solid red;
+.table04,.th2-fourn,.td-fourn{
+    border-bottom: 2px solid black;
     border-collapse: collapse;
 }
 .thead-fourn{
@@ -510,8 +520,10 @@ table .th2-fourn .td-fourn{
 }
 .td-fourn{
     padding:10px;
+    text-align: center;
 }
 .fieldset6{
+    border:0;
     width:620px;
     margin-left: 200px;
 }
@@ -532,6 +544,7 @@ table .th2-fourn .td-fourn{
     text-decoration: underline;
 }
 .fieldset7{
+    border:1px solid black;
     width:350px;
     border-radius: 20px;
     margin-left:80px;
@@ -585,8 +598,8 @@ table .th2-fourn .td-fourn{
     margin-top:50px;
     text-decoration: underline;
 }
-table .th2-cat .td-cat{
-    border: 1px solid black;
+.table06,.th2-cat,.td-cat{
+    border-bottom: 2px solid black;
     border-collapse: collapse;
 }
 .thead-cat{
@@ -599,8 +612,10 @@ table .th2-cat .td-cat{
 }
 .td-cat{
     padding:10px;
+    text-align: center;
 }
 .fieldset8{
+    border:0;
     width:400px;
     margin-left: 300px;
 }
@@ -634,6 +649,7 @@ table .th2-cat .td-cat{
     text-decoration: underline;
 }
 .fieldset9{
+    border:1px solid black;
     width:350px;
     border-radius: 20px;
     margin-left:80px;
@@ -686,8 +702,8 @@ table .th2-cat .td-cat{
     margin-top:50px;
     text-decoration: underline;
 }
-table .th2-user .td-user{
-    border: 1px solid black;
+.table08,.th2-user,.td-user{
+    border-bottom: 2px solid black;
     border-collapse: collapse;
 }
 .thead-user{
@@ -700,8 +716,10 @@ table .th2-user .td-user{
 }
 .td-user{
     padding:10px;
+    text-align: center;
 }
 .fieldset01{
+    border:0;
     width:950px;
     margin-left:10px;
 }

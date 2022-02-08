@@ -86,7 +86,7 @@ if(isset($_GET["supp"])){
         <div class="recup-fourn">
             <h3 class="stit-fourn">Liste des Fournisseurs</h3>
             <fieldset class="fieldset6">
-                    <table>
+                    <table class="table05">
                     <thead class="thead-fourn">
                        <tr>
                            <th class="th2-fourn">Nom</th>
@@ -105,8 +105,8 @@ if(isset($_GET["supp"])){
                            <td class="td-fourn"><?php echo $dataselect["prenom_fourn"]?></td>
                            <td class="td-fourn"><?php echo $dataselect["addresse_fourn"]?></td>
                            <td class="td-fourn"><?php echo $dataselect["telephone_fourn"]?></td>
-                           <td class="td-fourn"><a class="btn-sup" href="fournisseur.php?supp=<?php echo $dataselect["id_fourn"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
                            <td class="td-fourn"><a class="btn-upd" href="modifierfour.php?mod=<?php echo $dataselect["id_fourn"]?>"><i class="far fa-edit"></i>Modifier</a></td>
+                           <td class="td-fourn"><a class="btn-sup" href="fournisseur.php?supp=<?php echo $dataselect["id_fourn"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
                            
                        </tr>
                        <?php

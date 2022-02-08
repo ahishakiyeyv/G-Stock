@@ -121,7 +121,7 @@ include("database.php");
         <div class="recup-sort">
             <h3 class="stitle-recup">   Produits sortie</h3>
             <fieldset class="fieldset3">
-            <table>
+            <table class="table02">
                    <thead class="thead-sort">
                        <tr>
                            <th class="th2-sort">Code Produit</th>

@@ -124,7 +124,7 @@ include("database.php");
                 </tr>
                 <tr>
                     <th></th>
-                    <td><input type="submit" value="Ajouter" id="sub1" name="submit">
+                    <td class="td0"><input type="submit" value="Ajouter" id="sub1" name="submit">
                     <input type="reset" value="Annuler" id="res1"></td>
                 </tr>
             </table>
@@ -144,7 +144,7 @@ include("database.php");
         <div class="tab-recup">
             <h3 class="s-title1">Liste des Entrées</h3>
             <fieldset class="fieldset1">
-                <table>
+                <table class="table01">
                    <thead class="thead">
                        <tr>
                            <th class="th2">Code Produit</th>
@@ -169,9 +169,8 @@ include("database.php");
                            <td class="td2"><?php echo $data["Quantite"]?></td>
                            <td class="td2"><?php echo $data["Prix_Achat"]?></td>
                            <td class="td2"><?php echo $data["fournisseur"]?></td>
+                           <td class="td2"><a class="btn-upd" href="modifierentree.php?mod=<?php echo $data["id_stock"]?>"><i class="far fa-edit"></i>Modifier</a></td> 
                            <td class="td2"><a class="btn-sup" href="entree.php?supp=<?php echo $data["id_stock"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a> </td>
-                           <td class="td2"><a class="btn-upd" href="modifierentree.php?mod=<?php echo $data["id_stock"]?>"><i class="far fa-edit"></i>Modifier</a></td>
-                          
                        </tr>
                        <?php
                         }

@@ -80,7 +80,7 @@ include("database.php");
             ?>
         <h3 class="stitle-pro">Listes Produits</h3>
             <fieldset class="fieldset003">
-            <table>
+            <table class="table03">
                    <thead class="thead-pro">
                        <tr>
                            <th class="th2-pro">Code Produit</th>
@@ -95,8 +95,9 @@ include("database.php");
                        <tr>
                            <td class="td-pro"><?php echo $dataselect["CodePro"];?></td>
                            <td class="td-pro"><?php echo $dataselect["nomPro"];?></td>
-                           <td class="td-pro"><a class="btn-sup" href="produit.php?supp=<?php echo $dataselect["id_pro"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
                            <td class="td-pro"><a class="btn-upd" href="modifierproduit.php?mod=<?php echo $dataselect["id_pro"]?>"><i class="far fa-edit"></i>Modifier</a></td>
+                           <td class="td-pro"><a class="btn-sup" href="produit.php?supp=<?php echo $dataselect["id_pro"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
+                          
                        </tr>
                        <?php
                    }

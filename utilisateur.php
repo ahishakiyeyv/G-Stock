@@ -93,7 +93,7 @@ include("database.php");
         <div class="recup-user">
         <h3 class="s-tituser">Liste des Utilisateurs</h3>
             <fieldset class="fieldset01">
-            <table>
+            <table class="table08">
                     <thead class="thead-user">
                        <tr>
                        <th class="th2-user">Nom</th>
@@ -116,8 +116,9 @@ include("database.php");
                            <td class="td-user"><?php echo $dataselection["adresse_util"]?></td>
                            <td class="td-user"><?php echo $dataselection["phone_util"]?></td>
                            <td class="td-user"><?php echo $dataselection["password_util"]?></td>
-                           <td class="td-user"><a class="btn-sup" href="utilisateur.php?supp=<?php echo $dataselection["id_util"]?>"><i class="fas fa-user-minus">Suppriner</i></a></td>
                            <td class="td-user"><a class="btn-upd" href="modifierutil.php?mod=<?php echo $dataselection["id_util"]?>"><i class="fas fa-user-edit"></i>Modifier</a></td>
+                           <td class="td-user"><a class="btn-sup" href="utilisateur.php?supp=<?php echo $dataselection["id_util"]?>"><i class="fas fa-user-minus">Suppriner</i></a></td>
+                           
                            <!-- <td class="td-user">Activer</td> -->
                        </tr>
                        <?php

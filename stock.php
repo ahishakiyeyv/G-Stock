@@ -60,14 +60,15 @@ include("database.php");
         <div class="table-stock">
             <h3 class="titlestock">Liste des produits en stock</h3>
             <fieldset class="fieldset4">
-            <table>
+            <table class="table04">
                    <thead class="thead-stock">
                        <tr>
                            <th class="th-stock">Code Produit</th>
                            <th class="th-stock">Designation</th>
                            <th class="th-stock">Categorie</th>
                            <th class="th-stock">Quantite</th>
-                           <th class="th-stock">Prix</th>
+                           <th class="th-stock">Prix de Vente</th>
+                           <th class="th-stock">Prix de Vente Total</th>
                            <th class="th-stock" colspan="2">Actions</th>
                        </tr>
                    </thead>
@@ -79,8 +80,9 @@ include("database.php");
                            <td class="td-stock"><?php echo $datastock["CodePro"]?></td>
                            <td class="td-stock"><?php echo $datastock["nomPro"]?></td>
                            <td class="td-stock"><?php echo $datastock["Categorie"]?></td>
-                           <td class="td-stock"><?php echo $datastock["Quantite"]-$datastock["qte_sortie"]?></td>
+                           <td class="td-stock"><?php echo $datastock["Quantite"]?></td>
                            <td class="td-stock"><?php echo $datastock["Prix_Achat"]?></td>
+                           <td class="td-stock"><?php echo $datastock["Quantite"] * $datastock["Prix_Achat"]?></td>
                            <!-- <td class="td-stock"><a href="stock.php?supp=<?php echo $datastock["idstock"]?>">Supprimer</a></td> -->
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>

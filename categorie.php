@@ -74,7 +74,7 @@ include("database.php");
         <div class="recup-cat">
             <h3 class="s-titcat2">Liste des categories</h3>
             <fieldset class="fieldset8">
-            <table>
+            <table class="table06">
                     <thead class="thead-cat">
                        <tr>
                            <th class="th2-cat">Nom Categorie</th>
@@ -87,8 +87,9 @@ include("database.php");
                    ?>
                        <tr>
                            <td class="td-cat"><?php echo $dataselect["nom_cat"];?></td>
-                           <td class="td-cat"><a class="btn-sup" href="categorie.php?supp?=<?php echo $dataselect["id_cat"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
                            <td class="td-cat"><a class="btn-upd" href="modifiercat.php?mod=<?php echo $dataselect["id_cat"]?>"><i class="far fa-edit"></i>Modifier</a></td>
+                           <td class="td-cat"><a class="btn-sup" href="categorie.php?supp?=<?php echo $dataselect["id_cat"]?>"><i class="fas fa-trash-alt"></i>Supprimer</a></td>
+                           
                        </tr>
                        <?php
                    }
