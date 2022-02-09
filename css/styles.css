@@ -2,10 +2,10 @@ body{
     margin:0;
     padding:0;
     box-sizing: border-box;
-    background: #5c5757;
+    background: #d0cdcd;
 }
 ::placeholder{
-    color:ivory;
+    color:black;
     opacity:1;
 }
 .btn-sup{
@@ -127,8 +127,8 @@ header{
     border:1px solid black;
     border-radius: 20px;
     width:370px;
-    box-shadow:  -6px -6px 5px #2e2c2c,
-    6px 6px 5px #8a8383;
+    box-shadow:  5px 5px 15px #535252,
+    -5px -5px 15px #ffffff;
 }
 .th1{
     font-family: Arial, Helvetica, sans-serif;
@@ -141,10 +141,10 @@ header{
     width:110%;
     border-radius: 3px;
     outline:none;
-    background:#5c5757 ;
+    background:#d0cdcd ;
     color:ivory;
-    box-shadow: inset -5px 5px 3px #252323,
-            inset 5px -5px 3px #938b8b;
+    box-shadow: inset 5px 5px 5px #535252,
+            inset -5px -5px 5px #ffffff;
 
 }
 #sub1{
@@ -222,8 +222,8 @@ header{
     width:350px;
     border-radius: 20px;
     margin-left:80px;
-    box-shadow:  -6px -6px 5px #2e2c2c,
-             6px 6px 5px #8a8383;
+    box-shadow:  5px 5px 15px #535252,
+    -5px -5px 15px #ffffff;
 }
 .th-sort{
     font-family: Arial, Helvetica, sans-serif;
@@ -236,10 +236,10 @@ header{
     width:110%;
     border-radius: 3px;
     outline:none;
-    background:#5c5757 ;
+    background:#d0cdcd ;
     color:ivory;
-    box-shadow: inset -5px 5px 3px #252323,
-    inset 5px -5px 3px #938b8b;
+    box-shadow: inset 5px 5px 5px #535252,
+            inset -5px -5px 5px #ffffff;
 
 }
 #btn-sub{
@@ -330,8 +330,8 @@ header{
     width:350px;
     border-radius: 20px;
     margin-left:80px;
-    box-shadow: -6px -6px 5px #2e2c2c,
-            6px 6px 5px #8a8383;
+    box-shadow:  5px 5px 15px #535252,
+    -5px -5px 15px #ffffff;
 }
 .th-pro{
     font-family: Arial, Helvetica, sans-serif;
@@ -344,10 +344,10 @@ header{
     width:110%;
     border-radius: 3px;
     outline:none;
-    background:#5c5757 ;
+    background:#d0cdcd ;
     color:ivory;
-    box-shadow: inset -5px 5px 3px #252323,
-            inset 5px -5px 3px #938b8b;
+    box-shadow: inset 5px 5px 5px #535252,
+            inset -5px -5px 5px #ffffff;
 
 }
 #sub_pro{
@@ -464,8 +464,8 @@ table .th-stock .td-stock{
     width:350px;
     border-radius: 20px;
     margin-left:80px;
-    box-shadow:  -6px -6px 5px #2e2c2c,
-             6px 6px 5px #8a8383;
+    box-shadow:  5px 5px 15px #535252,
+             -5px -5px 15px #ffffff;
 }
 .th-fourn{
     font-family: Arial, Helvetica, sans-serif;
@@ -478,10 +478,10 @@ table .th-stock .td-stock{
     width:110%;
     border-radius: 3px;
     outline:none;
-    background:#5c5757 ;
+    background:#d0cdcd ;
     color:ivory;
-    box-shadow: inset -5px 5px 3px #252323,
-            inset 5px -5px 3px #938b8b;
+    box-shadow: inset 5px 5px 5px #535252,
+            inset -5px -5px 5px #ffffff;
 
 }
 #sub-fourn{
@@ -556,8 +556,8 @@ table .th-stock .td-stock{
     width:350px;
     border-radius: 20px;
     margin-left:80px;
-    box-shadow:  -6px -6px 5px #2e2c2c,
-             6px 6px 5px #8a8383;
+    box-shadow:  5px 5px 15px #535252,
+             -5px -5px 15px #ffffff;
 }
 .th-cat{
     font-family: Arial, Helvetica, sans-serif;
@@ -570,10 +570,10 @@ table .th-stock .td-stock{
     width:110%;
     border-radius: 5px;
     outline:none;
-    background:#5c5757 ;
+    background:#d0cdcd ;
     color:ivory;
-    box-shadow: inset -5px 5px 3px #252323,
-            inset 5px -5px 3px #938b8b;
+    box-shadow: inset 5px 5px 5px #535252,
+    inset -5px -5px 5px #ffffff;
 
 }
 #sub-cat{
@@ -661,8 +661,8 @@ table .th-stock .td-stock{
     width:350px;
     border-radius: 20px;
     margin-left:80px;
-    box-shadow:  -6px -6px 5px #2e2c2c,
-             6px 6px 5px #8a8383;
+    box-shadow:  5px 5px 15px #535252,
+             -5px -5px 15px #ffffff;
 }
 .th-user{
     font-family: Arial, Helvetica, sans-serif;
@@ -675,10 +675,10 @@ table .th-stock .td-stock{
     width:110%;
     border-radius: 5px;
     outline:none;
-    background:#5c5757;
+    background:#d0cdcd;
     color:ivory;
-    box-shadow: inset -5px 5px 3px #252323,
-            inset 5px -5px 3px #938b8b;
+    box-shadow: inset 5px 5px 5px #535252,
+            inset -5px -5px 5px #ffffff;
 }
 #sub-user{
     font-size: 15px;
