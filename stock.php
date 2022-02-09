@@ -9,7 +9,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Stock</title>
 </head>
 <body>
@@ -68,7 +68,7 @@ include("database.php");
                            <th class="th-stock">Designation</th>
                            <th class="th-stock">Categorie</th>
                            <th class="th-stock">Quantite</th>
-                           <th class="th-stock">Prix de Vente</th>
+                           <th class="th-stock">Prix Unitaire</th>
                            <th class="th-stock">Prix de Vente Total</th>
                            <th class="th-stock" colspan="2">Actions</th>
                        </tr>
