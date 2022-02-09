@@ -5,7 +5,7 @@ body{
     background: #d0cdcd;
 }
 ::placeholder{
-    color:black;
+    color:#020236;
     opacity:1;
 }
 .btn-sup{
@@ -18,7 +18,7 @@ body{
 }
 .btn-upd{
     text-decoration: none;
-    color:#42f587;
+    color:green;
 }
 .btn-upd:hover{
     color:gray;
@@ -27,8 +27,9 @@ body{
 /*==============================Header & Menu========================*/
 header{
     background:black;
+    position:fixed;
     width:100%;
-    height:80%;
+    height:15%;
     display:flex;
     justify-content: space-between;
 }
@@ -79,7 +80,9 @@ header{
     justify-content: space-between;
 }
 .menu-link{
+    position:fixed;
     margin-left:-40px;
+    margin-top:80px;
 }
 .menu-link .ul .li{
     background:black;
@@ -104,6 +107,7 @@ header{
 }
 /*================================fin header et menu==================*/
 #section{
+    margin-top:100px;
     width:1000px;
     margin-right:50px;
 }
@@ -134,18 +138,20 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
-    color:#ffffff;
+    color:#020236;
 }
 .inpt1{
+    margin-left:15px;
+    margin-top:10px;
     height:30px;
     width:110%;
-    border-radius: 3px;
     outline:none;
     background:#d0cdcd ;
-    color:ivory;
-    box-shadow: inset 5px 5px 5px #535252,
-            inset -5px -5px 5px #ffffff;
-
+    color:#020236;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom:2px solid #020236;
 }
 #sub1{
     font-size: 15px;
@@ -153,17 +159,21 @@ header{
     background:#42f587;
     height:40px;
     width:85px;
+    border:none;
+    margin-top:20px;
 }
 #sub1:hover{
     background:ivory;
     color:#42f587;
 }
 #res1{
+    border:none;
     font-size: 15px;
     font-family:Arial, Helvetica, sans-serif;
     background:#f54242;
     height:40px;
     width:80px;
+    margin-top:20px;
 }
 #res1:hover{
     background:ivory;
@@ -229,18 +239,20 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
-    color:#fff;
+    color:#020236;
 }
 .inpt-sort{
+    margin-left:15px;
+    margin-top:10px;
     height:30px;
     width:110%;
-    border-radius: 3px;
     outline:none;
     background:#d0cdcd ;
-    color:ivory;
-    box-shadow: inset 5px 5px 5px #535252,
-            inset -5px -5px 5px #ffffff;
-
+    color:#020236;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom:2px solid #020236;
 }
 #btn-sub{
     font-size: 15px;
@@ -248,6 +260,8 @@ header{
     background:#42f587;
     height:40px;
     width:85px;
+    border:none;
+    margin-top:20px;
 }
 #btn-sub:hover{
     background:ivory;
@@ -259,6 +273,8 @@ header{
     background:#f54242;
     height:40px;
     width:80px;
+    border:none;
+    margin-top:20px;
 }
 #btn-reset:hover{
     background:ivory;
@@ -337,17 +353,20 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
-    color:#ffffff;
+    color:#020236;
 }
 .inpt-pro{
+    margin-left:15px;
+    margin-top:10px;
     height:30px;
     width:110%;
-    border-radius: 3px;
     outline:none;
     background:#d0cdcd ;
-    color:ivory;
-    box-shadow: inset 5px 5px 5px #535252,
-            inset -5px -5px 5px #ffffff;
+    color:#020236;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom:2px solid #020236;
 
 }
 #sub_pro{
@@ -356,6 +375,8 @@ header{
     background:#42f587;
     height:40px;
     width:85px;
+    border:none;
+    margin-top:20px;
 }
 #sub_pro:hover{
     background:ivory;
@@ -367,6 +388,8 @@ header{
     background:#f54242;
     height:40px;
     width:80px;
+    border:none;
+    margin-top:20px;
 }
 #res_pro:hover{
     background:ivory;
@@ -471,17 +494,21 @@ table .th-stock .td-stock{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
-    color:#ffffff;
+    color:#020236;
 }
 .inpt-fourn{
+    margin-left:15px;
+    margin-top:10px;
     height:30px;
     width:110%;
-    border-radius: 3px;
     outline:none;
     background:#d0cdcd ;
-    color:ivory;
-    box-shadow: inset 5px 5px 5px #535252,
-            inset -5px -5px 5px #ffffff;
+    color:#020236;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom:2px solid #020236;
+  
 
 }
 #sub-fourn{
@@ -490,6 +517,8 @@ table .th-stock .td-stock{
     background:#42f587;
     height:40px;
     width:85px;
+    border:none;
+    margin-top:20px;
 }
 #sub-fourn:hover{
     background:ivory;
@@ -501,6 +530,8 @@ table .th-stock .td-stock{
     background:#f54242;
     height:40px;
     width:80px;
+    border:none;
+    margin-top:20px;
 }
 #res-fourn:hover{
     background:ivory;
@@ -563,17 +594,20 @@ table .th-stock .td-stock{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
-    color:#ffffff;
+    color:#020236;
 }
 .inpt-cat{
+    margin-left:15px;
+    margin-top:10px;
     height:30px;
     width:110%;
-    border-radius: 5px;
     outline:none;
     background:#d0cdcd ;
-    color:ivory;
-    box-shadow: inset 5px 5px 5px #535252,
-    inset -5px -5px 5px #ffffff;
+    color:#020236;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom:2px solid #020236;
 
 }
 #sub-cat{
@@ -582,6 +616,8 @@ table .th-stock .td-stock{
     background:#42f587;
     height:40px;
     width:85px;
+    border:none;
+    margin-top:20px;
 }
 #sub-cat:hover{
     background:ivory;
@@ -593,6 +629,8 @@ table .th-stock .td-stock{
     background:#f54242;
     height:40px;
     width:80px;
+    border:none;
+    margin-top:20px;
 }
 #res-cat:hover{
     background:ivory;
@@ -668,17 +706,20 @@ table .th-stock .td-stock{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
-    color:#ffffff;
+    color:#020236;
 }
 .inpt-user{
+    margin-left:15px;
+    margin-top:10px;
     height:30px;
     width:110%;
-    border-radius: 5px;
     outline:none;
-    background:#d0cdcd;
-    color:ivory;
-    box-shadow: inset 5px 5px 5px #535252,
-            inset -5px -5px 5px #ffffff;
+    background:#d0cdcd ;
+    color:#020236;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom:2px solid #020236;
 }
 #sub-user{
     font-size: 15px;
@@ -686,6 +727,8 @@ table .th-stock .td-stock{
     background:#42f587;
     height:40px;
     width:85px;
+    border:none;
+    margin-top:20px;
 }
 #sub-user:hover{
     background:ivory;
@@ -697,6 +740,8 @@ table .th-stock .td-stock{
     background:#f54242;
     height:40px;
     width:80px;
+    border:none;
+    margin-top:20px;
 }
 #res-user:hover{
     background:ivory;
