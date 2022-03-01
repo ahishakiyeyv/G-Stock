@@ -52,17 +52,17 @@ include("database.php");
                <form action="" method="post">
             <table>
                 <tr>
-                     <th class="th1">Code Produit:</th>
+                     <th class="th1">Nom Produit:</th>
                      <td>
                          <select name="codepro" class="inpt1"> 
-                         <option value="">---Code Produit---</option>
+                         <option value="">---Nom Produit---</option>
                          <?php 
                          
-                        $reponse=$bdd->query("SELECT CodePro FROM produit ORDER BY id_pro ASC");
+                        $reponse=$bdd->query("SELECT nomPro FROM produit ORDER BY id_pro ASC");
                         while($data=$reponse->fetch()){
                             ?>
                             
-                            <option value="<?php echo $data["CodePro"]?>"><?php echo $data["CodePro"]?></option>
+                            <option value="<?php echo $data["nomPro"]?>"><?php echo $data["nomPro"]?></option>
                             <?php
                         }
                         ?>
