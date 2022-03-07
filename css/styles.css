@@ -613,7 +613,6 @@ table .th-stock .td-stock{
 }
 .th2-cat{
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     padding:10px;
 }
 .td-cat{
@@ -628,13 +627,11 @@ table .th-stock .td-stock{
 /*=================================================================================*/
 /*==============================journal===========================*/
 .title-journ1{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
 }
 .title-journ2{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
@@ -642,13 +639,11 @@ table .th-stock .td-stock{
 /*===============================================================================*/
 /*===========================utilisateur===========================*/
 .title{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
 }
 .stit-user{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:50px;
     margin-top:50px;
@@ -662,7 +657,6 @@ table .th-stock .td-stock{
              -5px -5px 15px #ffffff;
 }
 .th-user{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
     color:#020236;
@@ -682,7 +676,6 @@ table .th-stock .td-stock{
 }
 #sub-user{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#42f587;
     height:40px;
     width:85px;
@@ -695,7 +688,6 @@ table .th-stock .td-stock{
 }
 #res-user{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#f54242;
     height:40px;
     width:80px;
@@ -709,7 +701,6 @@ table .th-stock .td-stock{
 }
 /*========================recuperation utilisateur================*/
 .s-tituser{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:350px;
     margin-top:50px;
@@ -724,7 +715,6 @@ table .th-stock .td-stock{
 }
 .th2-user{
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     padding:10px;
 }
 .td-user{
@@ -739,7 +729,6 @@ table .th-stock .td-stock{
 /*============================================================================*/
 /*=========================statistique=========================*/
 .title-stat{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
