@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
 body{
     margin:0;
     padding:0;
@@ -87,7 +91,6 @@ header{
 .menu-link .ul .li{
     background:black;
     list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     padding:15px;
     width:120%;
@@ -114,13 +117,11 @@ header{
 /*==============================================================================*/
 /*=============================Entree=======================*/
 .title{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
 }
 .s-title{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:50px;
     margin-top:50px;
@@ -134,7 +135,6 @@ header{
     -5px -5px 15px #ffffff;
 }
 .th1{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
     color:#020236;
@@ -154,7 +154,6 @@ header{
 }
 #sub1{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#42f587;
     height:40px;
     width:85px;
@@ -168,7 +167,6 @@ header{
 #res1{
     border:none;
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#f54242;
     height:40px;
     width:80px;
@@ -192,7 +190,6 @@ header{
 }
 .th2{
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     padding:10px;
 }
 .td2{
@@ -205,7 +202,6 @@ header{
     margin-left: 10px;
 }
 .s-title1{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:50px;
     margin-top:50px;
@@ -214,13 +210,11 @@ header{
 /*============================================================================*/
 /*=========================sortie==============================*/
 .title-sort{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
 }
 .stitle-sort{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:50px;
     margin-top:50px;
@@ -234,7 +228,6 @@ header{
     -5px -5px 15px #ffffff;
 }
 .th-sort{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
     color:#020236;
@@ -254,7 +247,6 @@ header{
 }
 #btn-sub{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#42f587;
     height:40px;
     width:85px;
@@ -267,7 +259,6 @@ header{
 }
 #btn-reset{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#f54242;
     height:40px;
     width:80px;
@@ -281,7 +272,6 @@ header{
 }
 /*===================================recuperation sortie==============*/
 .stitle-recup{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:50px;
     margin-top:50px;
@@ -295,7 +285,6 @@ header{
 }
 .th2-sort{
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     padding:10px;
 }
 .td-sort{
@@ -313,7 +302,6 @@ header{
 .printed{
     text-decoration: none;
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     padding:20px;
     background:linear-gradient(180deg,#01041a,#7857e6);
     color:ivory;
@@ -327,13 +315,11 @@ header{
 /*====================================================================================*/
 /*==========================Produit===================================*/
 .title_pro{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
 }
 .stitlepro{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:100px;
     margin-top:50px;
@@ -347,7 +333,6 @@ header{
     -5px -5px 15px #ffffff;
 }
 .th-pro{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
     color:#020236;
@@ -368,7 +353,6 @@ header{
 }
 #sub_pro{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#42f587;
     height:40px;
     width:85px;
@@ -381,7 +365,6 @@ header{
 }
 #res_pro{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#f54242;
     height:40px;
     width:80px;
@@ -395,7 +378,6 @@ header{
 }
 /*===============================recuperation produit=====================*/
 .stitle-pro{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:320px;
     margin-top:100px;
@@ -409,7 +391,6 @@ header{
 }
 .th2-pro{
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     padding:10px;
 }
 .td-pro{
@@ -424,13 +405,11 @@ header{
 /*====================================================================================*/
 /*=============================stock=========================*/
 .title-stock{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
 }
 .titlestock{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:250px;
     margin-top:50px;
@@ -449,7 +428,6 @@ table .th-stock .td-stock{
 }
 .th-stock{
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     padding:15px;
 }
 .td-stock{
@@ -466,13 +444,11 @@ table .th-stock .td-stock{
 /*==================================================================================*/
 /*===========================fournisseur======================*/
 .title-four{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
 }
 .s-titFourn{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:50px;
     margin-top:50px;
@@ -486,7 +462,6 @@ table .th-stock .td-stock{
              -5px -5px 15px #ffffff;
 }
 .th-fourn{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
     color:#020236;
@@ -508,7 +483,6 @@ table .th-stock .td-stock{
 }
 #sub-fourn{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#42f587;
     height:40px;
     width:85px;
@@ -521,7 +495,6 @@ table .th-stock .td-stock{
 }
 #res-fourn{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#f54242;
     height:40px;
     width:80px;
@@ -535,7 +508,6 @@ table .th-stock .td-stock{
 }
 /*========================recuperation fournisseur============*/
 .stit-fourn{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:350px;
     margin-top:50px;
@@ -549,7 +521,6 @@ table .th-stock .td-stock{
 }
 .th2-fourn{
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     padding:10px;
 }
 .td-fourn{
@@ -565,13 +536,11 @@ table .th-stock .td-stock{
 /*=============================================================================*/
 /*=======================categorie========================*/
 .title-cat{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
 }
 .s-titcat{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:50px;
     margin-top:50px;
@@ -585,7 +554,6 @@ table .th-stock .td-stock{
              -5px -5px 15px #ffffff;
 }
 .th-cat{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: left;
     color:#020236;
@@ -606,7 +574,6 @@ table .th-stock .td-stock{
 }
 #sub-cat{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#42f587;
     height:40px;
     width:85px;
@@ -619,7 +586,6 @@ table .th-stock .td-stock{
 }
 #res-cat{
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif;
     background:#f54242;
     height:40px;
     width:80px;
@@ -633,7 +599,6 @@ table .th-stock .td-stock{
 }
 /*=================================recuperation categorie====================*/
 .s-titcat2{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left:350px;
     margin-top:50px;
