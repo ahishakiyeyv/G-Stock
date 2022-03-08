@@ -91,15 +91,15 @@ header{
 .menu-link .ul .li{
     background:black;
     list-style-type: none;
-    font-size: 20px;
-    padding:15px;
+    padding:12px;
     width:120%;
 }
 .menu-link .ul .li .link{
     text-decoration: none;
     color:ivory;
-    padding:15px;
+    padding:10px;
     text-align: right;
+    font-size:19px;
 }
 .menu-link .ul .li:hover{
     background:gray;
