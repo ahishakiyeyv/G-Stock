@@ -195,7 +195,8 @@ header{
 .td2{
     padding:10px;
     text-align:center;
-    color:#000;
+    color:black;
+    font-weight: 600;
 }
 .fieldset1{
     border:0;
@@ -291,7 +292,8 @@ header{
 .td-sort{
     padding:10px;
     text-align :center;
-    color:#000;
+    color:black;
+    font-weight: 600;
 }
 .fieldset3{
     border:0;
@@ -398,7 +400,8 @@ header{
 .td-pro{
     padding:10px;
     text-align: center;
-    color:#000;
+    color:black;
+    font-weight: 600;
 }
 .fieldset003{
     border:0;
@@ -436,7 +439,8 @@ table .th-stock .td-stock{
 .td-stock{
     padding:15px;
     text-align: center;
-    color:#000;
+    color:black;
+    font-weight: 600;
 }
 .td-stocke{
     padding:20px;
@@ -530,7 +534,8 @@ table .th-stock .td-stock{
 .td-fourn{
     padding:10px;
     text-align: center;
-    color:#000;
+    color:black;
+    font-weight: 600;
 }
 .fieldset6{
     border:0;
@@ -623,7 +628,8 @@ table .th-stock .td-stock{
 .td-cat{
     padding:10px;
     text-align: center;
-    color:#000;
+    color:black;
+    font-weight: 600;
 }
 .fieldset8{
     border:0;
@@ -726,7 +732,8 @@ table .th-stock .td-stock{
 .td-user{
     padding:10px;
     text-align: center;
-    color:#000;
+    color:black;
+    font-weight: 600;
 }
 .fieldset01{
     border:0;
