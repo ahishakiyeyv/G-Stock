@@ -9,7 +9,8 @@ body{
     background: #d0cdcd;
 }
 ::placeholder{
-    color:#000;
+    color:black;
+    font-weight: 550;
     opacity:1;
 }
 .btn-sup{
