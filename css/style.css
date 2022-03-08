@@ -9,7 +9,7 @@ body{
     background: #d0cdcd;
 }
 ::placeholder{
-    color:black;
+    color:#020236;
     font-weight: 600;
     opacity:2;
 }
@@ -138,7 +138,7 @@ header{
 .th1{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
     font-weight: 900;
     letter-spacing: 1px;
 }
@@ -207,7 +207,7 @@ header{
 }
 .fieldset1{
     border:0;
-    width:980px;
+    width:1000px;
     margin-left: 10px;
 }
 .s-title1{
@@ -230,7 +230,7 @@ header{
 }
 .fieldset2{
     border:1px solid black;
-    width:350px;
+    width:400px;
     border-radius: 20px;
     margin-left:80px;
     box-shadow:  5px 5px 15px #535252,
@@ -239,7 +239,9 @@ header{
 .th-sort{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt-sort{
     margin-left:15px;
@@ -286,8 +288,7 @@ header{
 /*===================================recuperation sortie==============*/
 .stitle-recup{
     font-size: 18px;
-    margin-left:50px;
-    margin-top:50px;
+   margin:25px 50px;
 }
 .table02,.th2-sort,.td-sort{
     border-bottom: 2px solid black;
@@ -308,8 +309,8 @@ header{
 }
 .fieldset3{
     border:0;
-    width:900px;
-    margin-left: 100px;
+    width:950px;
+    margin:25px 50px;
 }
 .print{
     margin:25px;
@@ -350,7 +351,9 @@ header{
 .th-pro{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt-pro{
     margin-left:15px;
@@ -459,7 +462,7 @@ table .th-stock .td-stock{
 .td-stocke{
     padding:20px;
     text-align: center;
-    color:black;
+    color:red;
     font-weight: 900;
     letter-spacing: 3px;
 }
@@ -486,7 +489,9 @@ table .th-stock .td-stock{
 .th-fourn{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt-fourn{
     margin-left:15px;
@@ -574,7 +579,7 @@ table .th-stock .td-stock{
 }
 .fieldset7{
     border:1px solid black;
-    width:350px;
+    width:450px;
     border-radius: 20px;
     margin-left:80px;
     box-shadow:  5px 5px 15px #535252,
@@ -583,7 +588,9 @@ table .th-stock .td-stock{
 .th-cat{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt-cat{
     margin-left:15px;
@@ -691,7 +698,9 @@ table .th-stock .td-stock{
 .th-user{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt-user{
     margin-left:15px;
