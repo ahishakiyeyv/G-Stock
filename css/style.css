@@ -156,6 +156,7 @@ header{
 #sub1{
     font-size: 15px;
     background:#42f587;
+    font-weight: 600;
     height:40px;
     width:85px;
     border:none;
@@ -168,6 +169,7 @@ header{
 #res1{
     border:none;
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -250,6 +252,7 @@ header{
 }
 #btn-sub{
     font-size: 15px;
+    font-weight: 600;
     background:#42f587;
     height:40px;
     width:85px;
@@ -262,6 +265,7 @@ header{
 }
 #btn-reset{
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -358,6 +362,7 @@ header{
 }
 #sub_pro{
     font-size: 15px;
+    font-weight: 600;
     background:#42f587;
     height:40px;
     width:85px;
@@ -370,6 +375,7 @@ header{
 }
 #res_pro{
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -492,6 +498,7 @@ table .th-stock .td-stock{
 }
 #sub-fourn{
     font-size: 15px;
+    font-weight: 600;
     background:#42f587;
     height:40px;
     width:85px;
@@ -504,6 +511,7 @@ table .th-stock .td-stock{
 }
 #res-fourn{
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -585,6 +593,7 @@ table .th-stock .td-stock{
 }
 #sub-cat{
     font-size: 15px;
+    font-weight: 600;
     background:#42f587;
     height:40px;
     width:85px;
@@ -597,6 +606,7 @@ table .th-stock .td-stock{
 }
 #res-cat{
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -689,6 +699,7 @@ table .th-stock .td-stock{
 }
 #sub-user{
     font-size: 15px;
+    font-weight: 600;
     background:#42f587;
     height:40px;
     width:85px;
@@ -701,6 +712,7 @@ table .th-stock .td-stock{
 }
 #res-user{
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
