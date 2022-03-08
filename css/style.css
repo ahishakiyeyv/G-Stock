@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -10,8 +10,8 @@ body{
 }
 ::placeholder{
     color:black;
-    font-weight: 550;
-    opacity:1;
+    font-weight: 600;
+    opacity:2;
 }
 .btn-sup{
     text-decoration: none;
@@ -139,6 +139,8 @@ header{
     font-size: 15px;
     text-align: left;
     color:#020236;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt1{
     margin-left:15px;
@@ -152,6 +154,8 @@ header{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #sub1{
     font-size: 15px;
@@ -249,6 +253,8 @@ header{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #btn-sub{
     font-size: 15px;
@@ -358,7 +364,8 @@ header{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
-
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #sub_pro{
     font-size: 15px;
@@ -493,7 +500,8 @@ table .th-stock .td-stock{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
-  
+    font-weight: 600;
+    letter-spacing: 1px;
 
 }
 #sub-fourn{
@@ -589,7 +597,8 @@ table .th-stock .td-stock{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
-
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #sub-cat{
     font-size: 15px;
@@ -696,6 +705,8 @@ table .th-stock .td-stock{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #sub-user{
     font-size: 15px;
