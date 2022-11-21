@@ -131,7 +131,7 @@ header{
     margin-top:50px;
 }
 .table1{
-    margin-left:80px;
+    margin-left:15rem;
     border:1px solid black;
     border-radius: 20px;
     width:370px;
@@ -235,7 +235,7 @@ header{
     border:1px solid black;
     width:400px;
     border-radius: 20px;
-    margin-left:80px;
+    margin-left:15rem;
     box-shadow:  5px 5px 15px #535252,
     -5px -5px 15px #ffffff;
 }
@@ -347,7 +347,7 @@ header{
     border:1px solid black;
     width:350px;
     border-radius: 20px;
-    margin-left:80px;
+    margin-left:15rem;
     box-shadow:  5px 5px 15px #535252,
     -5px -5px 15px #ffffff;
 }
@@ -439,10 +439,11 @@ header{
     font-size: 18px;
     margin-left:250px;
     margin-top:50px;
+    display: none;
 }
 .fieldset4{
     width:1000px;
-    margin-left:20px;
+    margin-left:1rem;
     border:0;
 }
 table .th-stock .td-stock{
@@ -485,7 +486,7 @@ table .th-stock .td-stock{
     border:1px solid black;
     width:350px;
     border-radius: 20px;
-    margin-left:80px;
+    margin-left:15rem;
     box-shadow:  5px 5px 15px #535252,
              -5px -5px 15px #ffffff;
 }
@@ -548,6 +549,7 @@ table .th-stock .td-stock{
 .table04,.th2-fourn,.td-fourn{
     border-bottom: 2px solid black;
     border-collapse: collapse;
+    width:80rem;
 }
 .thead-fourn{
     background:#17238a;
@@ -564,8 +566,8 @@ table .th-stock .td-stock{
 }
 .fieldset6{
     border:0;
-    width:620px;
-    margin-left: 200px;
+    width:100%;
+    margin-left: 1rem;
 }
 
 /*=============================================================================*/

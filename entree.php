@@ -194,6 +194,12 @@ if(isset($_POST["submit"])){
     $fournisseur=$_POST["fournis"];
     $insertion=$bdd->prepare("INSERT INTO entreestock(CodePro,Designation,Categorie,date_Entre,Quantite,Prix_Achat,fournisseur)VALUES(?,?,?,?,?,?,?)");
     $insertion->execute(array($code,$designation,$categorie,$dateEn,$quantite,$prix,$fournisseur));
+    $insertions=$bdd->prepare("INSERT INTO stock(codepro,designation,categorie,QuantiteStock,prixUnitaire)VALUES(?,?,?,?,?)");
+    $insertions->execute(array($code,$designation,$categorie,$quantite,$prix));
+
+    echo "<script>alert('Produit enregistré avec succes!')</script>";
+}else{
+    echo "<script>alert('Echec lors de l enregistrement!')</script>";
 
 }
 ?>

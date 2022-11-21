@@ -57,7 +57,7 @@ include("database.php");
     }
     ?>
     <section id="section">
-        <h2 class="title-stock">En Stock</h2>
+        <h2 class="title-stock">Liste des produits en Stock</h2>
         <div class="table-stock">
             <h3 class="titlestock">Liste des produits en stock</h3>
             <fieldset class="fieldset4">
