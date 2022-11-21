@@ -9,7 +9,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Utilisateur</title>
 </head>
 <body>
@@ -47,7 +47,7 @@ include("database.php");
     <section id="section">
         <h2 class="title">Utilisateur</h2>
         <div class="users">
-            <h3 class="stit-user">Ajouter un Utilisateur</h3>
+            <h3 class="stit-user">Ajouter un Utilisateur:</h3>
             <fieldset class="fieldset9">
                 <form action="" method="post">
                 <table>
@@ -74,6 +74,10 @@ include("database.php");
                     <tr>
                      <th class="th-user">Mot de Passe:</th>
                         <td><input type="password" name="motdepasse" class="inpt-user" placeholder="Mot de Passe..." required></td>
+                    </tr>
+                    <tr>
+                     <th class="th-user">Photo:</th>
+                        <td><input type="file" name="images" class="inpt-user" required></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Ajouter" id="sub-user" name="submit"></td>
@@ -142,5 +146,8 @@ include("database.php");
         $password=$_POST["motdepasse"];
         $insertion=$bdd->prepare("INSERT INTO utilisateur(nom_util,prenom_util,email_util,adresse_util,phone_util,password_util)VALUES(?,?,?,?,?,?)");
         $insertion->execute(array($name,$surname,$mail,$adresse,$phone,$password));
+    echo "<script>alert('Utilisateur ajoute avec succes!')</script>";
+    }else{
+        echo "<script>alert('Erreur lors de l'enregistrement!')</script>";
     }
 ?>
