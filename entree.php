@@ -13,6 +13,7 @@ include("database.php");
     <title>Entrée Stock</title>
 </head>
 <body>
+    <div id="preloader"></div>
     <header>
         <div class="admin">
             <div class="img">
@@ -58,11 +59,11 @@ include("database.php");
                          <option value="">---Nom Produit---</option>
                          <?php 
                          
-                        $reponse=$bdd->query("SELECT nomPro FROM produit ORDER BY id_pro ASC");
+                        $reponse=$bdd->query("SELECT CodePro FROM produit ORDER BY id_pro ASC");
                         while($data=$reponse->fetch()){
                             ?>
                             
-                            <option value="<?php echo $data["nomPro"]?>"><?php echo $data["nomPro"]?></option>
+                            <option value="<?php echo $data["CodePro"]?>"><?php echo $data["CodePro"]?></option>
                             <?php
                         }
                         ?>
@@ -181,6 +182,13 @@ include("database.php");
         </div>
     </section>
     </div>
+    <script>
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load",function(){
+            loader.style.display = "none";
+        })
+    </script>
 </body>
 </html>
 <?php
@@ -198,8 +206,5 @@ if(isset($_POST["submit"])){
     $insertions->execute(array($code,$designation,$categorie,$quantite,$prix));
 
     echo "<script>alert('Produit enregistré avec succes!')</script>";
-}else{
-    echo "<script>alert('Echec lors de l enregistrement!')</script>";
-
 }
 ?>

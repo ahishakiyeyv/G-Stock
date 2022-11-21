@@ -39,6 +39,7 @@ include("database.php");
     <title>Statistique</title>
 </head>
 <body>
+  <div id="preloader"></div>
 <header>
         <div class="admin">
             <div class="img">
@@ -75,5 +76,12 @@ include("database.php");
         <div id="columnchart_material" style="width: 800px; height: 400px;margin-left:100px;"></div>
     </section>
     </div>
+    <script>
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load",function(){
+            loader.style.display = "none";
+        })
+    </script>
 </body>
 </html>

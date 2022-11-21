@@ -55,6 +55,7 @@ include("database.php");
         font-family: arial;
         text-align:center;
     }
+ 
     </style>
 </head>
 <body>

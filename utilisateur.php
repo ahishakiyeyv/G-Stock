@@ -13,6 +13,7 @@ include("database.php");
     <title>Utilisateur</title>
 </head>
 <body>
+    <div id="preloader"></div>
 <header>
         <div class="admin">
             <div class="img">
@@ -134,6 +135,13 @@ include("database.php");
         </div>
     </section>
     </div>
+    <script>
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load",function(){
+            loader.style.display = "none";
+        })
+    </script>
 </body>
 </html>
 <?php

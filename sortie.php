@@ -13,6 +13,7 @@ include("database.php");
     <title>Sortie Stock</title>
 </head>
 <body>
+    <div id="preloader"></div>
 <header>
         <div class="admin">
             <div class="img">
@@ -159,6 +160,13 @@ include("database.php");
         </div>
     </section>
     </div>
+    <script>
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load",function(){
+            loader.style.display = "none";
+        })
+    </script>
 </body>
 </html>
 <?php
@@ -169,7 +177,9 @@ include("database.php");
         $qtesortie=$_POST["qtesortie"];
         $prixachat=$_POST["prixachat"];
         $datesortie=$_POST["datesortie"];
-        $insert=$bdd->prepare("INSERT INTO sortiestock(codepro,designation,categorie,qte_sortie,Prix_Achat,date_sortie)VALUES(?,?,?,?,?,?)");
+        $insert=$bdd->prepare("INSERT INTO sortiestock(codepro,designation,categorie,qte_sortie,Prix_Achat,date_sortie) UPDATE stock SET QuantiteStock =QuantiteStock-$qtesortie");
         $insert->execute(array($code,$designat,$categorie,$qtesortie,$prixachat,$datesortie));
+
+        echo "<script>alert('Operation effectué avec succes!')</script>";
     }
 ?>

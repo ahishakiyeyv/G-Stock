@@ -14,6 +14,7 @@ include("database.php");
     <title>Tableau de Bord</title>
 </head>
 <body>
+    <div id="preloader"></div>
 <header>
         <div class="admin">
             <div class="img">
@@ -45,8 +46,19 @@ include("database.php");
                 <li class="li"><a class="link" href="statistique.php"><i class="fas fa-chart-line"></i>  --  Statistique</a></li>
         </div>
     </nav>
-    <section id="section">     
+    <section id="section">    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+            
     </section>
     </div>
+
+    <script>
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load",function(){
+            loader.style.display = "none";
+        })
+    </script>
 </body>
 </html>
