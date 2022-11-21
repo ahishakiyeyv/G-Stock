@@ -34,15 +34,15 @@ include("database.php");
         <div class="menu-link">
             <ul class="ul">
             <li class="li"><a class="link" href="dashboard.php"><i class="fas fa-tachometer-alt"></i>  --  Dashboard</a></li>
-                <li class="li"><a class="link" href="entree.php"><i class="fas fa-cart-plus"></i>   --   Entrée</a></li>
+                <li class="li"><a class="link" href="entree.php"><i class="fas fa-cart-plus"></i>  --  Entrée</a></li>
                 <li class="li"><a class="link" href="sortie.php"><i class="fas fa-shopping-bag"></i>  --  Sortie</a></li>
-                <li class="li"><a class="link" href="produit.php"><i class="fas fa-dolly-flatbed"></i>   --   Produit </a></li>
-                <li class="li"><a class="link" href="stock.php"><i class="fas fa-warehouse"></i>   --     Stock </a></li>
-                <li class="li"><a class="link" href="fournisseur.php"><i class="fas fa-user-plus"></i>   --   Fournisseur</a></li>
-                <li class="li"><a class="link" href="categorie.php"><i class="fas fa-sort"></i>      --   Categorie</a></li>
-                <li class="li"><a class="link" href="journal.php"><i class="fas fa-newspaper"></i>   --   Journal</a></li>
-                <li class="li"><a class="link" href="utilisateur.php"><i class="fas fa-users"></i>   --  Utilisateur</a></li>
-                <li class="li"><a class="link" href="statistique.php"><i class="fas fa-chart-line"></i>     --    Statistique</a></li>
+                <li class="li"><a class="link" href="produit.php"><i class="fas fa-dolly-flatbed"></i>  --  Produit </a></li>
+                <li class="li"><a class="link" href="stock.php"><i class="fas fa-warehouse"></i>  --  Stock </a></li>
+                <li class="li"><a class="link" href="fournisseur.php"><i class="fas fa-user-plus"></i>  --  Fournisseur</a></li>
+                <li class="li"><a class="link" href="categorie.php"><i class="fas fa-sort"></i>  --  Categorie</a></li>
+                <li class="li"><a class="link" href="journal.php"><i class="fas fa-newspaper"></i>  --  Journal</a></li>
+                <li class="li"><a class="link" href="utilisateur.php"><i class="fas fa-users"></i>  --  Utilisateur</a></li>
+                <li class="li"><a class="link" href="statistique.php"><i class="fas fa-chart-line"></i>  --  Statistique</a></li>
         </div>
     </nav>
     <section id="section">

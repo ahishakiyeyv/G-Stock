@@ -10,7 +10,8 @@ body{
 }
 ::placeholder{
     color:#020236;
-    opacity:1;
+    font-weight: 600;
+    opacity:2;
 }
 .btn-sup{
     text-decoration: none;
@@ -93,13 +94,15 @@ header{
     list-style-type: none;
      font-size: 20px;
     padding:15px;
+    padding:12px;
     width:120%;
 }
 .menu-link .ul .li .link{
     text-decoration: none;
     color:ivory;
-    padding:15px;
+    padding:10px;
     text-align: right;
+    font-size:19px;
 }
 .menu-link .ul .li:hover{
     background:gray;
@@ -118,6 +121,7 @@ header{
 /*=============================Entree=======================*/
 .title{
      font-size: 30px;
+    font-size: 30px;
     text-align: center;
     letter-spacing: 3px;
 }
@@ -137,7 +141,9 @@ header{
 .th1{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt1{
     margin-left:15px;
@@ -151,10 +157,13 @@ header{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #sub1{
     font-size: 15px;
     background:#42f587;
+    font-weight: 600;
     height:40px;
     width:85px;
     border:none;
@@ -167,6 +176,7 @@ header{
 #res1{
     border:none;
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -195,10 +205,12 @@ header{
 .td2{
     padding:10px;
     text-align:center;
+    color:black;
+    font-weight: 600;
 }
 .fieldset1{
     border:0;
-    width:980px;
+    width:1000px;
     margin-left: 10px;
 }
 .s-title1{
@@ -221,7 +233,7 @@ header{
 }
 .fieldset2{
     border:1px solid black;
-    width:350px;
+    width:400px;
     border-radius: 20px;
     margin-left:80px;
     box-shadow:  5px 5px 15px #535252,
@@ -230,7 +242,9 @@ header{
 .th-sort{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt-sort{
     margin-left:15px;
@@ -244,9 +258,12 @@ header{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #btn-sub{
     font-size: 15px;
+    font-weight: 600;
     background:#42f587;
     height:40px;
     width:85px;
@@ -259,6 +276,7 @@ header{
 }
 #btn-reset{
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -273,8 +291,7 @@ header{
 /*===================================recuperation sortie==============*/
 .stitle-recup{
     font-size: 18px;
-    margin-left:50px;
-    margin-top:50px;
+   margin:25px 50px;
 }
 .table02,.th2-sort,.td-sort{
     border-bottom: 2px solid black;
@@ -290,11 +307,13 @@ header{
 .td-sort{
     padding:10px;
     text-align :center;
+    color:black;
+    font-weight: 600;
 }
 .fieldset3{
     border:0;
-    width:900px;
-    margin-left: 100px;
+    width:950px;
+    margin:25px 50px;
 }
 .print{
     margin:25px;
@@ -335,7 +354,9 @@ header{
 .th-pro{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt-pro{
     margin-left:15px;
@@ -349,10 +370,12 @@ header{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
-
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #sub_pro{
     font-size: 15px;
+    font-weight: 600;
     background:#42f587;
     height:40px;
     width:85px;
@@ -365,6 +388,7 @@ header{
 }
 #res_pro{
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -396,6 +420,8 @@ header{
 .td-pro{
     padding:10px;
     text-align: center;
+    color:black;
+    font-weight: 600;
 }
 .fieldset003{
     border:0;
@@ -433,11 +459,13 @@ table .th-stock .td-stock{
 .td-stock{
     padding:15px;
     text-align: center;
+    color:black;
+    font-weight: 600;
 }
 .td-stocke{
     padding:20px;
     text-align: center;
-    color:black;
+    color:red;
     font-weight: 900;
     letter-spacing: 3px;
 }
@@ -464,7 +492,9 @@ table .th-stock .td-stock{
 .th-fourn{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt-fourn{
     margin-left:15px;
@@ -478,11 +508,13 @@ table .th-stock .td-stock{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
-  
+    font-weight: 600;
+    letter-spacing: 1px;
 
 }
 #sub-fourn{
     font-size: 15px;
+    font-weight: 600;
     background:#42f587;
     height:40px;
     width:85px;
@@ -495,6 +527,7 @@ table .th-stock .td-stock{
 }
 #res-fourn{
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -526,6 +559,8 @@ table .th-stock .td-stock{
 .td-fourn{
     padding:10px;
     text-align: center;
+    color:black;
+    font-weight: 600;
 }
 .fieldset6{
     border:0;
@@ -547,7 +582,7 @@ table .th-stock .td-stock{
 }
 .fieldset7{
     border:1px solid black;
-    width:350px;
+    width:450px;
     border-radius: 20px;
     margin-left:15rem;
     box-shadow:  5px 5px 15px #535252,
@@ -556,7 +591,9 @@ table .th-stock .td-stock{
 .th-cat{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt-cat{
     margin-left:15px;
@@ -570,10 +607,12 @@ table .th-stock .td-stock{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
-
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #sub-cat{
     font-size: 15px;
+    font-weight: 600;
     background:#42f587;
     height:40px;
     width:85px;
@@ -586,6 +625,7 @@ table .th-stock .td-stock{
 }
 #res-cat{
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -618,6 +658,8 @@ table .th-stock .td-stock{
 .td-cat{
     padding:10px;
     text-align: center;
+    color:black;
+    font-weight: 600;
 }
 .fieldset8{
     border:0;
@@ -659,7 +701,9 @@ table .th-stock .td-stock{
 .th-user{
     font-size: 15px;
     text-align: left;
-    color:#020236;
+    color:#000;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .inpt-user{
     margin-left:15px;
@@ -673,9 +717,12 @@ table .th-stock .td-stock{
     border-left: 0;
     border-right: 0;
     border-bottom:2px solid #020236;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #sub-user{
     font-size: 15px;
+    font-weight: 600;
     background:#42f587;
     height:40px;
     width:85px;
@@ -688,6 +735,7 @@ table .th-stock .td-stock{
 }
 #res-user{
     font-size: 15px;
+    font-weight: 600;
     background:#f54242;
     height:40px;
     width:80px;
@@ -720,6 +768,8 @@ table .th-stock .td-stock{
 .td-user{
     padding:10px;
     text-align: center;
+    color:black;
+    font-weight: 600;
 }
 .fieldset01{
     border:0;
