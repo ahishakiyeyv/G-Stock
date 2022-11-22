@@ -177,8 +177,10 @@ include("database.php");
         $qtesortie=$_POST["qtesortie"];
         $prixachat=$_POST["prixachat"];
         $datesortie=$_POST["datesortie"];
-        $insert=$bdd->prepare("INSERT INTO sortiestock(codepro,designation,categorie,qte_sortie,Prix_Achat,date_sortie) UPDATE stock SET QuantiteStock =QuantiteStock-$qtesortie");
-        $insert->execute(array($code,$designat,$categorie,$qtesortie,$prixachat,$datesortie));
+        $insert=$bdd->prepare("INSERT INTO sortiestock(codepro,designation,categorie,qte_sortie,Prix_Achat,date_sortie) UPDATE stock SET QuantiteStock =QuantiteStock-$qtesortie WHERE codepro=codepro");
+        // $insert->execute(array($code,$designat,$categorie,$qtesortie,$prixachat,$datesortie));
+        $insert=$bdd->query("INSERT INTO sortiestock(codepro,designation,categorie,qte_sortie,Prix_Achat,date_sortie)VALUES(?,?,?,?,?,?)");
+        
 
         echo "<script>alert('Operation effectué avec succes!')</script>";
     }

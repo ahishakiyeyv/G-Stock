@@ -9,7 +9,7 @@ include("database.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/03.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Stock</title>
 </head>
 <body>
@@ -71,7 +71,6 @@ include("database.php");
                            <th class="th-stock">Quantite</th>
                            <th class="th-stock">Prix Unitaire</th>
                            <th class="th-stock">Prix de Vente Total</th>
-                           <th class="th-stock" colspan="2">Actions</th>
                        </tr>
                    </thead>
                    <tbody class="tbody-stock">
@@ -86,12 +85,10 @@ include("database.php");
                            <td class="td-stock"><?php echo $datastock["Designation"]?></td>
                            <td class="td-stock"><?php echo $datastock["Categorie"]?></td>
                            <td class="td-stock"><?php echo $datastock["Quantite"]?></td>
-                           <td class="td-stock"><?php echo $datastock["Prix_Achat"]?></td>
-                           <td class="td-stock"><?php echo $datastock["Quantite"] * (int)$prix?></td>
+                           <td class="td-stock"><?php echo $datastock["Prix_Achat"]?> Fbu</td>
+                           <td class="td-stock"><?php echo $datastock["Quantite"] * (int)$prix?> Fbu</td>
                            <!-- <td class="td-stock"><a href="stock.php?supp=<?php echo $datastock["idstock"]?>">Supprimer</a></td> -->
-                           <td class="td-stock">Modifier</td>
-                           <td class="td-stock">Vendre</td>
-                       </tr>
+                            </tr>
                        <?php
                        }
                        ?>
@@ -101,7 +98,7 @@ include("database.php");
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>
-                           <td class="td-stocke"><?php echo (int)$total?></td>
+                           <td class="td-stocke"><?php echo (int)$total?> Fbu</td>
                            <td class="td-stock"></td>
                            <td class="td-stock"></td>
                        </tr>

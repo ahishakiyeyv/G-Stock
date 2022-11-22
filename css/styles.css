@@ -453,20 +453,22 @@ header{
     display: none;
 }
 .fieldset4{
-    width:1000px;
-    margin-left:1rem;
+    width:80%; 
+    /* margin-left:1rem; */
     border:0;
 }
-table .th-stock .td-stock{
-    border: 1px solid black;
+.table04,.th-stock,.td-stock{
+    border-bottom: 1px solid black;
+
     border-collapse: collapse;
+    
 }
 .thead-stock{
     background: #17238a;
 }
 .th-stock{
-    font-size: 15px;
-    padding:15px;
+    font-size: 20px;
+    padding:10px;
 }
 .td-stock{
     padding:15px;
@@ -479,7 +481,7 @@ table .th-stock .td-stock{
     text-align: center;
     color:red;
     font-weight: 900;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 /*==================================================================================*/
 /*===========================fournisseur======================*/
@@ -660,6 +662,7 @@ table .th-stock .td-stock{
 .table06,.th2-cat,.td-cat{
     border-bottom: 2px solid black;
     border-collapse: collapse;
+    width:50rem;
 }
 .thead-cat{
     background:#17238a;
@@ -676,8 +679,7 @@ table .th-stock .td-stock{
 }
 .fieldset8{
     border:0;
-    width:400px;
-    margin-left: 300px;
+    margin-left: 30px;
 }
 /*=================================================================================*/
 /*==============================journal===========================*/
